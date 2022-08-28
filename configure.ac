@@ -244,13 +244,11 @@ then
     AC_SEARCH_LIBS([libiconv_open], [iconv]))
 fi
 
-AC_ARG_ENABLE(printing, [  --disable-printing
-                       Disable printing support])
+AC_ARG_ENABLE([printing],
+        AS_HELP_STRING([--enable-printing], [Enable Xp printing support (default=no)]),
+        [enable_printing="yes"], [enable_printing="no"]
+)
 
-if test x$enable_printing = x
-then
-    enable_printing="yes"
-fi
 
 if test "$enable_printing" = "yes"
 then
