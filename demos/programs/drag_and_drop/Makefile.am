@@ -10,6 +10,6 @@ DNDDemo_SOURCES = DNDDemo.c DNDDraw.c
 simpledrop_SOURCES = simpledrop.c
 data_DATA = $(EXTRA_DIST) $(DNDDemo_SOURCES) $(simpledrop_SOURCES)
 noinst_HEADERS = DNDDemo.h
-LDADD = ../../../lib/Xm/libXm.la
+LDADD = ../../../lib/Xm/libXm.la $(XTOOLLIB)
 
 AM_CPPFLAGS = -I$(srcdir)/../../../lib -I$(top_builddir)/lib ${X_CFLAGS} 

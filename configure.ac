@@ -71,6 +71,10 @@ AC_PATH_X
 AC_PATH_XTRA
 LT_LIB_XTHREADS
 
+dnl Add X11 goodies here
+EXTRA_LIBS="${X_LIBS} ${EXTRA_LIBS}"
+EXTRA_INCS="${X_CFLAGS} ${EXTRA_INCS}"
+
 dnl Checks for Xos_r.h
 
 AC_CHECK_HEADERS([X11/Xos_r.h])
@@ -286,7 +290,27 @@ AC_SUBST(LIB_XP)
 AC_FIND_XFT
 AC_IMAGE_SUPPORT
 
+# let's check for some useful libraries...
+XTOOLLIB=""
+AC_CHECK_LIB(X11, XOpenDisplay, [XTOOLLIB="-lX11"], ,
+                  [${EXTRA_INCS} ${EXTRA_LIBS}])
+AC_CHECK_LIB(Xext, XextFindDisplay, [XTOOLLIB="-lXext ${XTOOLLIB}"], ,
+                  [${EXTRA_INCS} ${EXTRA_LIBS}])
+AC_CHECK_LIB(Xau, XauReadAuth, [XTOOLLIB="-lXau ${XTOOLLIB}"], ,
+                  [${EXTRA_INCS} ${EXTRA_LIBS}])
+AC_CHECK_LIB(Xpm, XpmLibraryVersion, [XTOOLLIB="-lXpm ${XTOOLLIB}"], ,
+                  [${EXTRA_INCS} ${EXTRA_LIBS}])
+AC_CHECK_LIB(Xt, XtInitialize, [XTOOLLIB="-lXt ${XTOOLLIB}"], ,
+                 [${EXTRA_INCS} ${EXTRA_LIBS}])
+AC_CHECK_LIB(Xmu, XmuMakeAtom, [XTOOLLIB="-lXmu ${XTOOLLIB}"], ,
+                 [${EXTRA_INCS} ${EXTRA_LIBS}])
+AC_CHECK_LIB(ICE, IceCloseConnection, [XTOOLLIB="-lICE ${XTOOLLIB}"], ,
+                  [${EXTRA_INCS} ${EXTRA_LIBS}])
+AC_CHECK_LIB(SM, SmcOpenConnection, [XTOOLLIB="-lSM ${XTOOLLIB}"], ,
+                 [${EXTRA_INCS} ${EXTRA_LIBS}])
+AC_SUBST([XTOOLLIB])
 
+LIBS="${EXTRA_LIBS} ${LIBS} ${PTHREAD_LIBS}"
 
 # AM_CONDITIONAL(Motif22Compatibility, test x$enable_motif22_compatibility = xyes)
 

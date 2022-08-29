@@ -7,7 +7,8 @@ CLEANFILES = exm_in_uil.uid
 #noinst_PROGRAMS = exm_in_uil
 #exm_in_uil_DEPENDENCIES = exm_in_uil.uid
 
-LDADD = -L../../../lib/Exm -lExmMrm -lExm  $(top_builddir)/lib/Mrm/libMrm.la
+LDADD = -L../../../lib/Exm -lExmMrm -lExm  $(top_builddir)/lib/Mrm/libMrm.la \
+	$(XTOOLLIB)
 
 
 AM_CPPFLAGS = -I$(top_srcdir)/lib -I$(top_srcdir)/lib -I../../../lib -I$(top_builddir)/lib ${X_CFLAGS} 

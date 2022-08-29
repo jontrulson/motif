@@ -8,5 +8,5 @@ EXTRA_DIST = Combo.ad
 combo_SOURCES = combo.c
 data_DATA = $(EXTRA_DIST) $(combo_SOURCES)
 TOPDIR = ../../..
-LDADD = $(TOPDIR)/lib/Xm/libXm.la
+LDADD = $(TOPDIR)/lib/Xm/libXm.la $(XTOOLLIB)
 AM_CPPFLAGS = -I$(TOPDIR)/lib -I$(srcdir)/$(TOPDIR)/lib ${X_CFLAGS} 

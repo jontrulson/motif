@@ -15,4 +15,5 @@ AM_CPPFLAGS = -I$(srcdir)/../../../../lib \
            -I$(top_builddir)/lib \
            ${X_CFLAGS} 
 LDADD = ../../../../lib/Xm/libXm.la \
-        ../../../lib/Exm/libExm.a
+        ../../../lib/Exm/libExm.a \
+	$(XTOOLLIB)

@@ -7,6 +7,6 @@ bin_PROGRAMS = colordemo
 colordemo_SOURCES = util-c.c colordemo.c
 EXTRA_DIST =
 data_DATA = $(colordemo_SOURCES) $(EXTRA_DIST)
-LDADD = $(TOPDIR)/lib/Xm/libXm.la
+LDADD = $(TOPDIR)/lib/Xm/libXm.la $(XTOOLLIB)
 TOPDIR = ../../..
 AM_CPPFLAGS = -I$(TOPDIR)/lib -I$(srcdir)/$(TOPDIR)/lib ${X_CFLAGS} 

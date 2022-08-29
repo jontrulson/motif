@@ -30,7 +30,8 @@ wml_SOURCES = wml.c
 wml_LDADD = -L. -lwml
 wml_DEPENDENCIES = libwml.a
 
-wmldbcreate_LDADD = ../../lib/Xm/libXm.la
+# JET - FIXME - hardcoded -lXt
+wmldbcreate_LDADD = ../../lib/Xm/libXm.la -lXt
 
 AM_CPPFLAGS = -I../../lib -I$(srcdir)/../../lib -I$(srcdir)/../../include ${X_CFLAGS} 
 

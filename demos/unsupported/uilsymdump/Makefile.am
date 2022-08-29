@@ -6,4 +6,4 @@ AM_CPPFLAGS = -I$(srcdir)/../../../clients -I$(srcdir)/../../../lib -I../../../c
 
 EXTRA_DIST =
 
-LDADD = ../../../clients/uil/libUil.la
+LDADD = ../../../clients/uil/libUil.la  $(XTOOLLIB)
