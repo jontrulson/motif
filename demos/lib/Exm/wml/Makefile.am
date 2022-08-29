@@ -9,7 +9,7 @@ noinst_PROGRAMS = wmldbcreate
 
 WMLDIR = $(top_srcdir)/tools/wml
 
-INCLUDES = -I$(top_srcdir)/lib \
+AM_CPPFLAGS = -I$(top_srcdir)/lib \
         -I$(top_builddir)/lib \
 	-I$(top_srcdir)/include \
 	-I$(srcdir)/../.. \
@@ -30,7 +30,7 @@ $(WMDTABLE): wmldbcreate $(TARGETS)
 	./wmldbcreate -o $@
 
 
-# INCLUDES = -I. -I$(INCLUDESRC) -I$(MINCLUDESRC) -I$(MLIBSRC) -I../../. -I$(MTOP)/include
+# AM_CPPFLAGS = -I. -I$(INCLUDESRC) -I$(MINCLUDESRC) -I$(MLIBSRC) -I../../. -I$(MTOP)/include
 # DEPLIBS = $(DEPXMLIB)  $(DEPXTOOLLIB) $(DEPXLIB)
 # LOCAL_LIBRARIES = XmClientLibs
 # 
