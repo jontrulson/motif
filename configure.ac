@@ -1,8 +1,19 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT
+AC_INIT([Motif],
+        [2.3.8a],
+        [https://github.com/jtrulson/motif],
+        [motif],
+        [https://github.com/jtrulson/motif])
 AC_CONFIG_SRCDIR([lib/Xm/Form.c])
-AC_PREREQ(2.52)
-AC_CONFIG_AUX_DIR(.)
+AC_PREREQ([2.69])
+AC_CONFIG_MACRO_DIRS([m4])
+dnl The new way...
+AM_INIT_AUTOMAKE([foreign subdir-objects no-define])
+
+AC_CANONICAL_HOST
+AC_CANONICAL_BUILD
+
+
 AC_CHECK_FILE(/usr/X/include/X11/X.h,
   AC_PREFIX_DEFAULT(/usr/X),
   AC_PREFIX_DEFAULT(/usr))
@@ -10,8 +21,7 @@ AC_CHECK_FILE(/usr/X11R6/include/X11/X.h,
   AC_PREFIX_DEFAULT(/usr/X11R6),
   AC_PREFIX_DEFAULT(/usr))
 
-dnl AM_MAINTAINER_MODE
-AC_CANONICAL_TARGET
+
 
 dnl The version of the Motif libraries
 CURRENT=4
@@ -21,8 +31,6 @@ AC_SUBST(CURRENT)
 AC_SUBST(REVISION)
 AC_SUBST(AGE)
 
-dnl This is really dumb but it seems to be bug
-AM_INIT_AUTOMAKE(motif,2.3.8,no-define)
 
 LIBTOOL_VERSION=$CURRENT:$REVISION:$AGE
 
@@ -31,7 +39,7 @@ dnl Override a default in libtool.
 dnl
 dnl AC_DISABLE_STATIC
 
-AC_CONFIG_HEADERS(include/config.h lib/Xm/Xm.h)
+AC_CONFIG_HEADERS([include/config.h lib/Xm/Xm.h])
 
 dnl Checks for programs.
 AC_PROG_CC

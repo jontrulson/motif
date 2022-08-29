@@ -29,5 +29,3 @@ SUBDIRS	= bindings bitmaps \
              clients \
              doc \
              demos
-AUTOMAKE_OPTIONS = 1.4
-ACLOCAL_AMFLAGS = -I .
