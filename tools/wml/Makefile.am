@@ -30,10 +30,9 @@ wml_SOURCES = wml.c
 wml_LDADD = -L. -lwml
 wml_DEPENDENCIES = libwml.a
 
-# JET - FIXME - hardcoded -lXt
-wmldbcreate_LDADD = ../../lib/Xm/libXm.la -lXt
+wmldbcreate_LDADD = ../../lib/Xm/libXm.la $(XTOOLLIB)
 
-AM_CPPFLAGS = -I../../lib -I$(srcdir)/../../lib -I$(srcdir)/../../include ${X_CFLAGS} 
+AM_CPPFLAGS = -I../../lib -I../../include ${X_CFLAGS} 
 
 noinst_LIBRARIES = libwml.a
 libwml_a_SOURCES = wmlparse.y wml.c wmloutkey.c wmlouth.c wmloutmm.c wmloutp1.c wmlresolve.c wmlsynbld.c wmlutils.c
@@ -44,7 +43,7 @@ wmllex.c: wmllex.l
 
 wmlsynbld.c: wmlparse.h
 
-$(srcdir)/wmldbcreate.c: $(WMLTARGETS) UilLexPars.h
+wmldbcreate.c: $(WMLTARGETS) UilLexPars.h
 
 UilLexPars.h: UilLexPars.c
 
@@ -56,9 +55,9 @@ $(WMLTARGETS): wml-uil.mm
 
 wml-uil.mm: wmluiltok wml UilLexPars.c $(TABLE)
 	$(RM) $(WMLTARGETS) wml.report wml-uil.mm
-	./wmluiltok <$(srcdir)/Uil.y >tokens.dat
+	./wmluiltok <$(abs_srcdir)/Uil.y >tokens.dat
 	$(RM) wml-uil.mm
-	./wml $(srcdir)/$(TABLE)
+	./wml $(abs_srcdir)/$(TABLE)
 	$(RM) tokens.dat
 
 all: motif.wmd
