@@ -818,7 +818,7 @@ _XmSelectionBoxCreateList(
         XmSelectionBoxWidget sel )
 {   
             Arg		al[20] ;
-    register int	ac = 0 ;
+    int	ac = 0 ;
             int *       position ;
             int         pos_count ;
             XtCallbackProc callbackProc ;
@@ -882,7 +882,7 @@ _XmSelectionBoxCreateText(
         XmSelectionBoxWidget sel )
 {
 	Arg		al[10];
-	register int	ac = 0;
+	int	ac = 0;
 	String		text_value ;
 	XtAccelerators	temp_accelerators ;
 /****************/
@@ -922,7 +922,7 @@ _XmSelectionBoxCreateSeparator(
         XmSelectionBoxWidget sel )
 {
 	Arg		al[10];
-	register int	ac = 0;
+	int	ac = 0;
 /****************/
 
 	XtSetArg (al[ac], XmNhighlightThickness, 0);  ac++;
@@ -1012,8 +1012,8 @@ _XmSelectionBoxGeoMatrixCreate(
 {
     XmSelectionBoxWidget sb = (XmSelectionBoxWidget) wid ;
     XmGeoMatrix     geoSpec ;
-    register XmGeoRowLayout  layoutPtr ;
-    register XmKidGeometry   boxPtr ;
+    XmGeoRowLayout  layoutPtr ;
+    XmKidGeometry   boxPtr ;
     XmKidGeometry   firstButtonBox ;
     XmListWidget    list ;
     Boolean         listLabelBox ;
@@ -1412,7 +1412,7 @@ UpdateString(
 #endif /* NeedWidePrototypes */
 {
 	Arg		al[3];
-    	register int	ac = 0;
+    	int	ac = 0;
 /****************/
 
 	if (w)
@@ -1440,7 +1440,7 @@ SetValues(
             XmSelectionBoxWidget request = (XmSelectionBoxWidget) rw ;
             XmSelectionBoxWidget new_w = (XmSelectionBoxWidget) nw ;
 	Arg		al[10];
-	register int	ac;
+	int	ac;
 
 	String		text_value ;
 /****************/
@@ -2086,7 +2086,7 @@ XmVaCreateSelectionBox(
         char *name,
         ...)
 {
-    register Widget w;
+    Widget w;
     va_list var;
     int count;
     

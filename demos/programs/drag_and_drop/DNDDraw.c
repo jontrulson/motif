@@ -313,10 +313,10 @@ void
 RectDrawStippled(Display *display, Window window, RectPtr rect)
 {
 
-    register int x = rect->x;
-    register int y = rect->y;
-    register Dimension width = rect->width;
-    register Dimension height = rect->height;
+    int x = rect->x;
+    int y = rect->y;
+    Dimension width = rect->width;
+    Dimension height = rect->height;
     XGCValues values;
     XSegment segments[4];
 

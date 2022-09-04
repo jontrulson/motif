@@ -52,7 +52,7 @@ void  main(argc, argv)
 int     argc;
 char  **argv;
 {
-    register int  	n, i;
+    int  	n, i;
     Arg			args[MAX_ARGS];
     char		name[10];
     Widget		PW, PB, PB1, PB2, PB3, PB4, PB5;
@@ -253,7 +253,7 @@ Widget w;         /* Composite widget being inserted into */
 static void ReportSize (w)
      Widget w;
 {
-  register int	n;
+  int	n;
   Arg		args[2];
   Dimension	width, height;
     

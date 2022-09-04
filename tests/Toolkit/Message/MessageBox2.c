@@ -66,7 +66,7 @@ XtPointer     client_data;                 /*  data from application   */
 XtPointer     call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
 
     n = 0;
     if (!isSet)
@@ -86,7 +86,7 @@ XtPointer     client_data;                 /*  data from application   */
 XtPointer     call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
 
     n=0;
     XtSetArg (args[n], XmNmessageAlignment, XmALIGNMENT_CENTER);      n++;
@@ -101,7 +101,7 @@ XtPointer     client_data;                 /*  data from application   */
 XtPointer     call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
 
     n=0;
     XtSetArg (args[n], XmNmessageAlignment, XmALIGNMENT_END);      n++;
@@ -115,7 +115,7 @@ unsigned int argc;
 char **argv;
 {
     Arg             args[10];
-    register int    n;      
+    int    n;      
     Widget	    Frame;
 
 

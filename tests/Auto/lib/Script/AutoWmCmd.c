@@ -5921,7 +5921,7 @@ PackCARD8(XtPointer data, CARD8 val)
 static XtPointer
 PackString(XtPointer data, String str)
 {
-    register int i, len = strlen(str);
+    int i, len = strlen(str);
 
     data = PackListNum(data, len);
     for (i = 0; i < len; i++, str++) 
@@ -5933,7 +5933,7 @@ PackString(XtPointer data, String str)
 static String
 UnpackString(XtPointer *data_ptr)
 {
-    register int i;
+    int i;
     int len = UnpackListNum(data_ptr);
     char *str, *top = XtMalloc((len + 1) * sizeof(char));
     

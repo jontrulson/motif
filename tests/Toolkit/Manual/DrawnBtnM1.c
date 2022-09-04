@@ -119,7 +119,7 @@ static void ReDrawCB(Widget w, XtPointer client_data, XtPointer call_data)
 
 void main (int argc, char **argv)
 {
-  register int       n;
+  int       n;
   Arg                args[MAX_ARGS];
   XmString           tcs;
   XmFontList         fontlist;

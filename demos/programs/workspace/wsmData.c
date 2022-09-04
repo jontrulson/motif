@@ -666,8 +666,8 @@ CvtStringToLongList(Display *dpy, XrmValuePtr args,
                     Cardinal *num_args, XrmValuePtr from, XrmValuePtr to, XtPointer *data)
 {
 
-  register int i, count = 1;
-  register char *ch;
+  int i, count = 1;
+  char *ch;
   char *start = from->addr;
   int len;
   static long *list;

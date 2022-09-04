@@ -44,7 +44,7 @@ int argc;
 char **argv;
 {
   Boolean            trace = False;
-  register int       n;
+  int       n;
   Arg                args[MAX_ARGS];
   XmString           target, xme_str, tmp_str;
   Widget             label, bboard;

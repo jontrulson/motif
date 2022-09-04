@@ -62,7 +62,7 @@ void  main (argc, argv)
     int     argc;
     char  **argv;
 {
-    register int       	n;
+    int       	n;
     Arg                	args[MAX_ARGS];
     XmString		tcs;
 

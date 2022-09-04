@@ -83,7 +83,7 @@ extern void UpdatePanel(struct menu *menu);
 static void
 ParseCmdLine(int argc, char **argv)
 {
-    register int i;
+    int i;
     
     if (argc == 1)
 	AppendFile(NULL);
@@ -119,7 +119,7 @@ decalPressedCB(Widget w, Widget client_data, caddr_t call_data)
 }
 
 static void
-deactivateEntry(register struct menuEntry *entry)
+deactivateEntry(struct menuEntry *entry)
 {
     if (entry->type == ME_MENU)
     {
@@ -137,9 +137,9 @@ deactivateEntry(register struct menuEntry *entry)
 }
 
 static void
-activateEntry(register struct menuEntry *entry)
+activateEntry(struct menuEntry *entry)
 {
-    register struct menu *menu = entry->containingMenu;
+    struct menu *menu = entry->containingMenu;
     Arg args[5];
     int n;
     Position menuX, menuY;
@@ -190,8 +190,8 @@ static Widget createMenuWidget(char *menuName, Boolean isTop)
     Widget menuWidget;
     Widget w;
     Widget form,decal;
-    register struct menu *menu;
-    register struct menuEntry *entry;
+    struct menu *menu;
+    struct menuEntry *entry;
     enum menuEntryType lastType = ME_NONE;
     Boolean thisEntryRemoved = FALSE;
     Boolean lastEntryRemoved;

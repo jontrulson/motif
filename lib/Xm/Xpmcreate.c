@@ -152,9 +152,9 @@ FUNC(xpmstrcasecmp, int, (char *s1, char *s2));
  */
 int
 xpmstrcasecmp(s1, s2)
-    register char *s1, *s2;
+    char *s1, *s2;
 {
-    register int c1, c2;
+    int c1, c2;
 
     while (*s1 && *s2) {
 	c1 = tolower(*s1);
@@ -983,10 +983,10 @@ CreateXImage(display, visual, depth, format, width, height, image_return)
  * We also assume that we use only ZPixmap images with null offsets.
  */
 
-LFUNC(_putbits, void, (register char *src, int dstoffset,
-		       register int numbits, register char *dst));
+LFUNC(_putbits, void, (char *src, int dstoffset,
+		       int numbits, char *dst));
 
-LFUNC(_XReverse_Bytes, int, (register unsigned char *bpt, register unsigned int nb));
+LFUNC(_XReverse_Bytes, int, (unsigned char *bpt, unsigned int nb));
 
 static unsigned char Const _reverse_byte[0x100] = {
     0x00, 0x80, 0x40, 0xc0, 0x20, 0xa0, 0x60, 0xe0,
@@ -1025,8 +1025,8 @@ static unsigned char Const _reverse_byte[0x100] = {
 
 static int
 _XReverse_Bytes(bpt, nb)
-    register unsigned char *bpt;
-    register unsigned int nb;
+    unsigned char *bpt;
+    unsigned int nb;
 {
     do {
 	*bpt = _reverse_byte[*bpt];
@@ -1038,10 +1038,10 @@ _XReverse_Bytes(bpt, nb)
 
 void
 xpm_xynormalizeimagebits(bp, img)
-    register unsigned char *bp;
-    register XImage *img;
+    unsigned char *bp;
+    XImage *img;
 {
-    register unsigned char c;
+    unsigned char c;
 
     if (img->byte_order != img->bitmap_bit_order) {
 	switch (img->bitmap_unit) {
@@ -1068,10 +1068,10 @@ xpm_xynormalizeimagebits(bp, img)
 
 void
 xpm_znormalizeimagebits(bp, img)
-    register unsigned char *bp;
-    register XImage *img;
+    unsigned char *bp;
+    XImage *img;
 {
-    register unsigned char c;
+    unsigned char c;
 
     switch (img->bits_per_pixel) {
 
@@ -1113,14 +1113,14 @@ static unsigned char Const _himask[0x09] = {
 
 static void
 _putbits(src, dstoffset, numbits, dst)
-    register char *src;			/* address of source bit string */
+    char *src;			/* address of source bit string */
     int dstoffset;			/* bit offset into destination;
 					 * range is 0-31 */
-    register int numbits;		/* number of bits to copy to
+    int numbits;		/* number of bits to copy to
 					 * destination */
-    register char *dst;			/* address of destination bit string */
+    char *dst;			/* address of destination bit string */
 {
-    register unsigned char chlo, chhi;
+    unsigned char chlo, chhi;
     int hibits;
 
     dst = dst + (dstoffset >> 3);
@@ -1167,11 +1167,11 @@ PutImagePixels(image, width, height, pixelindex, pixels)
     unsigned int *pixelindex;
     Pixel *pixels;
 {
-    register char *src;
-    register char *dst;
-    register unsigned int *iptr;
-    register unsigned int x, y;
-    register char *data;
+    char *src;
+    char *dst;
+    unsigned int *iptr;
+    unsigned int x, y;
+    char *data;
     Pixel pixel, px;
     int nbytes, depth, ibu, ibpp, i;
 
@@ -1667,14 +1667,14 @@ MSWPutImagePixels(dc, image, width, height, pixelindex, pixels)
 
 static int
 PutPixel1(ximage, x, y, pixel)
-    register XImage *ximage;
+    XImage *ximage;
     int x;
     int y;
     unsigned long pixel;
 {
-    register char *src;
-    register char *dst;
-    register int i;
+    char *src;
+    char *dst;
+    int i;
     Pixel px;
     int nbytes;
 
@@ -1702,14 +1702,14 @@ PutPixel1(ximage, x, y, pixel)
 
 static int
 PutPixel(ximage, x, y, pixel)
-    register XImage *ximage;
+    XImage *ximage;
     int x;
     int y;
     unsigned long pixel;
 {
-    register char *src;
-    register char *dst;
-    register int i;
+    char *src;
+    char *dst;
+    int i;
     Pixel px;
     unsigned int nbytes, ibpp;
 
@@ -1740,7 +1740,7 @@ PutPixel(ximage, x, y, pixel)
 
 static int
 PutPixel32(ximage, x, y, pixel)
-    register XImage *ximage;
+    XImage *ximage;
     int x;
     int y;
     unsigned long pixel;
@@ -1757,7 +1757,7 @@ PutPixel32(ximage, x, y, pixel)
 
 static int
 PutPixel32MSB(ximage, x, y, pixel)
-    register XImage *ximage;
+    XImage *ximage;
     int x;
     int y;
     unsigned long pixel;
@@ -1777,7 +1777,7 @@ PutPixel32MSB(ximage, x, y, pixel)
 
 static int
 PutPixel32LSB(ximage, x, y, pixel)
-    register XImage *ximage;
+    XImage *ximage;
     int x;
     int y;
     unsigned long pixel;
@@ -1797,7 +1797,7 @@ PutPixel32LSB(ximage, x, y, pixel)
 
 static int
 PutPixel16MSB(ximage, x, y, pixel)
-    register XImage *ximage;
+    XImage *ximage;
     int x;
     int y;
     unsigned long pixel;
@@ -1815,7 +1815,7 @@ PutPixel16MSB(ximage, x, y, pixel)
 
 static int
 PutPixel16LSB(ximage, x, y, pixel)
-    register XImage *ximage;
+    XImage *ximage;
     int x;
     int y;
     unsigned long pixel;
@@ -1833,7 +1833,7 @@ PutPixel16LSB(ximage, x, y, pixel)
 
 static int
 PutPixel8(ximage, x, y, pixel)
-    register XImage *ximage;
+    XImage *ximage;
     int x;
     int y;
     unsigned long pixel;
@@ -1847,7 +1847,7 @@ PutPixel8(ximage, x, y, pixel)
 
 static int
 PutPixel1MSB(ximage, x, y, pixel)
-    register XImage *ximage;
+    XImage *ximage;
     int x;
     int y;
     unsigned long pixel;
@@ -1864,7 +1864,7 @@ PutPixel1MSB(ximage, x, y, pixel)
 
 static int
 PutPixel1LSB(ximage, x, y, pixel)
-    register XImage *ximage;
+    XImage *ximage;
     int x;
     int y;
     unsigned long pixel;

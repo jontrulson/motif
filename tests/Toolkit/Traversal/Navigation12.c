@@ -65,8 +65,8 @@ void  main (argc, argv)
     int     argc;
     char  **argv;
 {
-    register int       	n;
-    register int       	i;
+    int       	n;
+    int       	i;
     Widget		Form, vertSB;
     Arg                	args[MAX_ARGS];
     XmString           	tcs, ItemList[NITEMS];

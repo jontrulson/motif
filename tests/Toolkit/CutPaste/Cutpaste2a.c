@@ -104,7 +104,7 @@ void  main(argc, argv)
      int	argc;
      char	*argv[];
 {
-    register int	n;
+    int	n;
     Arg			args[MAX_ARGS];
     XmString		tcs;
 
@@ -289,7 +289,7 @@ void PasteItemFromClipboard(textw)
    unsigned long	outlength = 0;	/* length of bytes copied	*/
    long			private_id = 0;	/* id of item on clipboard	*/
    XmTextPosition	cursorPos;	/* text cursor position		*/
-   register int		ac;		/* arg count			*/
+   int		ac;		/* arg count			*/
    Arg			al[10];		/* arg list			*/
 
 /*

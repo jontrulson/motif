@@ -599,10 +599,10 @@ _XmRegisterConverters( void )
  ************************************************************************/
 Boolean 
 XmeNamesAreEqual(
-        register char *in_str,
-        register char *test_str )
+        char *in_str,
+        char *test_str )
 {
-        register char i ;
+        char i ;
 
     if(    ((in_str[0] == 'X') || (in_str[0] == 'x'))
         && ((in_str[1] == 'M') || (in_str[1] == 'm'))    )
@@ -1401,7 +1401,7 @@ CvtStringToStringTable(
         XrmValue *to_val,
         XtPointer *data)	/* unused */
 {   
-    register char *p ;
+    char *p ;
             char *top ;
             String *table ;
     static String *tblptr ;
@@ -1506,7 +1506,7 @@ CvtStringToCardinalList(
     XrmValue *to_val,
     XtPointer *data)	/* unused */
 {
-    register char *	p;
+    char *	p;
     Cardinal *		crd_array;
     int             	crd_array_size = 50;
     int			crd_array_count = 0;

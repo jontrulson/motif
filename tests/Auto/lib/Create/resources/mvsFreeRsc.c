@@ -106,8 +106,8 @@ MvsWidgetClassInfo	*widget_class_info;
 Arg			*args;
 Cardinal		nargs;
 {
-    register int	i, j;
-    register num_res = widget_class_info->num_resources;
+    int	i, j;
+    num_res = widget_class_info->num_resources;
     MvsResourceInfoRecord *res_info = widget_class_info->resource_info;
 
     for (i=0; i<nargs; i++) {

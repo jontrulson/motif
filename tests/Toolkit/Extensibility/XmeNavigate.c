@@ -56,7 +56,7 @@ XmString	default_str1, default_str2, default_str3,
 int 
 main (int argc, char **argv)
 {
-  register int       n;
+  int       n;
   Arg                args[MAX_ARGS];
   Widget       	     grid;
   char               name[80];

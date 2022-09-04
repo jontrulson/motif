@@ -53,7 +53,7 @@ Cardinal *orig_argcnt;
 Arg new_args[];
 Cardinal new_argcnt;
 {
-    register int i;
+    int i;
 
     if (new_args == NULL || new_argcnt == 0)
 	return;

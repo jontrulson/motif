@@ -75,7 +75,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
     Widget   child=NULL;
 
     if (destroy) {
@@ -100,7 +100,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
     Widget   child=NULL;
     static   int destroyAll = False;
 
@@ -136,7 +136,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
     Widget   child=NULL;
 
     child = XmMessageBoxGetChild (w, XmDIALOG_SYMBOL_LABEL);
@@ -162,7 +162,7 @@ unsigned int argc;
 char **argv;
 {
     Arg             args[20];          
-    register int    n;           
+    int    n;           
     Widget	    Frame;
 
     /*  initialize toolkit  */

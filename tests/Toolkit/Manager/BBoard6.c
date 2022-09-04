@@ -49,7 +49,7 @@ void  main(argc, argv)
 int     argc;
 char **argv;
 {
-  register int  n;
+  int  n;
   Arg           args[MAX_ARGS];
   
   CommonTestInit(argc, argv);
@@ -64,8 +64,8 @@ char **argv;
 static void RunTest(shell)
 Widget shell;
 {
-  register int  i;
-  register int  n;
+  int  i;
+  int  n;
   Arg           args[MAX_ARGS];
   Dimension  mw; 
     
@@ -175,7 +175,7 @@ Widget shell;
 static void CreateBulletinBoard(parent)
 Widget parent;
 {
-  register int  n;
+  int  n;
   Arg           args[MAX_ARGS];
   
   n = 0;

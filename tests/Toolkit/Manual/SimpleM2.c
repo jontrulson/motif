@@ -85,7 +85,7 @@ CreateControlPanel()
   Widget controlpanel, mainParent, coredump4;
   Widget error1, coredump2, coredump3, noconvert, destroy;
   XmString tcs;
-  register int n;
+  int n;
 
   n = 0;
   XtSetArg(args[n], XmNx, 414); n++;

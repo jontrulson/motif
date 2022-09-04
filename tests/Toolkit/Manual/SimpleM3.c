@@ -75,7 +75,7 @@ char **argv;
   Widget bar, option, popup, radio_box, check_box;
   Widget pd0, pd1, pd2;
   Arg args[10]; 
-  register int n;
+  int n;
 
   XmNULL = cs("");
 

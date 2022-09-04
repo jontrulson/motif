@@ -77,7 +77,7 @@ void CBHandler(Widget w, XtPointer client_data, XtPointer call_data)
 static Widget CreateLabel(char *label, Widget parent)
 {
     Widget widget;
-    register int n;
+    int n;
     Arg args[MAX_ARGS];
     XmString tcs;
 
@@ -93,7 +93,7 @@ static Widget CreateLabel(char *label, Widget parent)
 static Widget CreatePushButton(char *label, Widget parent)
 {
     Widget widget;
-    register int n;
+    int n;
     Arg args[MAX_ARGS];
     XmString tcs;
 
@@ -115,7 +115,7 @@ static Widget CreatePushButton(char *label, Widget parent)
 static Widget CreateToggle(char *label, Widget parent)
 {
     Widget widget;
-    register int n;
+    int n;
     Arg args[MAX_ARGS];
     XmString tcs;
 
@@ -152,7 +152,7 @@ static Widget CreatePullDown(Widget parent, char *name)
 static Widget CreateCascade(char *label, Widget submenu, Widget parent)
 {
     Widget widget;
-    register int n;
+    int n;
     Arg args[MAX_ARGS];
     XmString tcs;
 
@@ -181,7 +181,7 @@ void PostMenu(Widget w, XtPointer popup, XEvent *event, Boolean *c)
 
 int main(int argc, char **argv)
 {
-  register int  n;
+  int  n;
   Arg args[MAX_ARGS];
   XmString tcs;
   XrmDatabase new_db, sav_db;

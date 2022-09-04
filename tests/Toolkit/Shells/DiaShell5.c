@@ -163,7 +163,7 @@ void  main(argc, argv)
     char  **argv;
 {
     Boolean       trace = False;
-    register int  n;
+    int  n;
     Arg           args[MAX_ARGS];
     XmString      tcs;
     Widget        Shell2;
@@ -306,7 +306,7 @@ static void  GetOptions(argc, argv, trace)
     char       **argv;
     Boolean     *trace;
 {
-    register int i;
+    int i;
 
 
     for (i = 1; i < argc; i++) {
@@ -350,7 +350,7 @@ static Widget CreateContinuePopup()
     Widget        message;
     Widget        exit_button, continue_button;
     Arg           args[MAX_ARGS];
-    register int  n;
+    int  n;
     XmString	  message_field, continue_field, exit_field;
     static XtTranslations tm_parsed, btn_parsed;
     static	  char tm[] =

@@ -264,7 +264,7 @@ char *argv[];
   Widget MessageDia;
   XrmValue from;
   XrmValue to_return;
-  register int	i;
+  int	i;
   XrmValue widgetname;
 
   static char MessageDialogName[] = "MessageDia";

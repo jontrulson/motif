@@ -50,7 +50,7 @@ Boolean XtIsSubclass(widget, widgetClass)
     Widget    widget;
     WidgetClass widgetClass;
 {
-    register WidgetClass w;
+    WidgetClass w;
 
     for (w = widget->core.widget_class; w != NULL; w = w->core_class.superclass)
 	if (w == widgetClass) return (TRUE);
@@ -94,7 +94,7 @@ Boolean _XtIsSubclassOf(object, widgetClass, superClass, flag)
     if (!(object->core.widget_class->core_class.class_inited & flag))
 	return False;
     else {
-	register WidgetClass c = object->core.widget_class;
+	WidgetClass c = object->core.widget_class;
 	while (c != superClass) {
 	    if (c == widgetClass)
 		return True;
@@ -136,15 +136,15 @@ static void ComputeWindowAttributes(widget,value_mask,values)
 } /* ComputeWindowAttributes */
 
 static void CallChangeManaged(widget)
-    register Widget		widget;
+    Widget		widget;
 {
-    register Cardinal		i;
+    Cardinal		i;
     XtWidgetProc		change_managed;
-    register WidgetList		children;
+    WidgetList		children;
     int    			managed_children = 0;
 
-    register CompositePtr cpPtr;
-    register CompositePartPtr clPtr;
+    CompositePtr cpPtr;
+    CompositePartPtr clPtr;
    
     if (XtIsComposite (widget)) {
 	cpPtr = (CompositePtr)&((CompositeWidget) widget)->composite;
@@ -173,7 +173,7 @@ static void MapChildren(cwp)
 {
     Cardinal i;
     WidgetList children;
-    register Widget child;
+    Widget child;
 
     children = cwp->children;
     for (i = 0; i <  cwp->num_children; i++) {
@@ -192,7 +192,7 @@ static Boolean ShouldMapAllChildren(cwp)
 {
     Cardinal i;
     WidgetList children;
-    register Widget child;
+    Widget child;
 
     children = cwp->children;
     for (i = 0; i < cwp->num_children; i++) {
@@ -210,7 +210,7 @@ static Boolean ShouldMapAllChildren(cwp)
 
 
 static void RealizeWidget(widget)
-    register Widget		widget;
+    Widget		widget;
 {
     XtValueMask			value_mask;
     XSetWindowAttributes	values;
@@ -262,9 +262,9 @@ static void RealizeWidget(widget)
     _XtRegisterWindow (window, widget);
 
     if (XtIsComposite (widget)) {
-	register Cardinal		i;
-	register CompositePart *cwp = &(((CompositeWidget)widget)->composite);
-	register WidgetList children = cwp->children;
+	Cardinal		i;
+	CompositePart *cwp = &(((CompositeWidget)widget)->composite);
+	WidgetList children = cwp->children;
 	/* Realize all children */
 	for (i = cwp->num_children; i != 0; --i) {
 	    RealizeWidget (children[i-1]);
@@ -287,7 +287,7 @@ static void RealizeWidget(widget)
 } /* RealizeWidget */
 
 void XtRealizeWidget (widget)
-    register Widget		widget;
+    Widget		widget;
 {
     if (XtIsRealized (widget)) return;
 
@@ -297,11 +297,11 @@ void XtRealizeWidget (widget)
 
 
 static void UnrealizeWidget(widget)
-    register Widget		widget;
+    Widget		widget;
 {
-    register CompositeWidget	cw;
-    register Cardinal		i;
-    register WidgetList		children;
+    CompositeWidget	cw;
+    Cardinal		i;
+    WidgetList		children;
 
     if (!XtIsWidget(widget) || !XtIsRealized(widget)) return;
 
@@ -342,7 +342,7 @@ static void UnrealizeWidget(widget)
 
 
 void XtUnrealizeWidget (widget)
-    register Widget		widget;
+    Widget		widget;
 {
     Window window = XtWindow(widget);
 
@@ -395,12 +395,12 @@ static Widget MatchExactChildren(names, bindings, children, num,
 	in_depth, out_depth, found_depth)
     XrmNameList     names;
     XrmBindingList  bindings;
-    register WidgetList children;
-    register int num;
+    WidgetList children;
+    int num;
     int in_depth, *out_depth, *found_depth;
 {
-    register Cardinal   i;
-    register XrmName    name = *names;
+    Cardinal   i;
+    XrmName    name = *names;
     Widget w, result = NULL;
     int d, min = 10000;
 
@@ -419,11 +419,11 @@ static Widget MatchWildChildren(names, bindings, children, num,
 	in_depth, out_depth, found_depth)
     XrmNameList     names;
     XrmBindingList  bindings;
-    register WidgetList children;
-    register int num;
+    WidgetList children;
+    int num;
     int in_depth, *out_depth, *found_depth;
 {
-    register Cardinal   i;
+    Cardinal   i;
     Widget w, result = NULL;
     int d, min = 10000;
 
@@ -461,7 +461,7 @@ static Widget SearchChildren(root, names, bindings, matchproc,
 
 static Widget NameListToWidget(root, names, bindings,
 	in_depth, out_depth, found_depth)
-    register Widget root;
+    Widget root;
     XrmNameList     names;
     XrmBindingList  bindings;
     int in_depth, *out_depth, *found_depth;
@@ -626,7 +626,7 @@ Boolean XtIsSensitive(object)
  * Internal routine; must be called only after XtIsWidget returns false
  */
 Widget _XtWindowedAncestor(object)
-    register Widget object;
+    Widget object;
 {
     Widget obj = object;
     for (object = XtParent(object); object && !XtIsWidget(object);)
@@ -707,15 +707,15 @@ static Boolean TestFile(path)
    null-terminated and not collapsed if it didn't fit */
 
 static Boolean Resolve(source, len, sub, num, buf, collapse)
-    register char *source;	/* The source string */
-    register int len;		/* The length in bytes of *source */
+    char *source;	/* The source string */
+    int len;		/* The length in bytes of *source */
     Substitution sub;	/* Array of string values to substitute */
     Cardinal num;	/* Number of substitution entries */
     char *buf;		/* Where to put the resolved string; */
     char collapse;	/* Character to collapse */
 {
-    register int bytesLeft = PATH_MAX;
-    register char* bp = buf;
+    int bytesLeft = PATH_MAX;
+    char* bp = buf;
 #ifndef DONT_COLLAPSE
     Boolean atBeginning = TRUE;
     Boolean prevIsCollapse = FALSE;
@@ -765,7 +765,7 @@ static Boolean Resolve(source, len, sub, num, buf, collapse)
 		PUT(*source)
 	    else {
 		/* Match the character against the match array */
-		register int j;
+		int j;
 
 		for (j = 0; j < num && sub[j].match != *source; j++) {}
 

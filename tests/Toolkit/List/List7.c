@@ -37,7 +37,7 @@ void  main (argc, argv)
     int     argc;
     char  **argv;
 {
-    register int       	n;
+    int       	n;
     Arg                	args[MAX_ARGS];
     XmString           	tcs, ItemList[NITEMS], ItemList2[NITEMS2];
     XmFontList         	newfontlist;
@@ -311,7 +311,7 @@ static void ClearCB(Widget w, XtPointer client_data,
 			      XtPointer call_data)
 
 {
-    register int i;
+    int i;
 
     for (i = 0 ; i < count ; i++)
 	CS_ItemList[i] = NULL;

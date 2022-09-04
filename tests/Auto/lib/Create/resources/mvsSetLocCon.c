@@ -61,8 +61,8 @@ ArgList args_in;
 Cardinal nargs;
 {
 extern WidgetClass xmMessageBoxWidgetClass;
-    register MvsWidgetInfoRecord *parent_info;
-    register MvsWidgetClassInfo  *parent_c_info;
+    MvsWidgetInfoRecord *parent_info;
+    MvsWidgetClassInfo  *parent_c_info;
     MvsWidgetClassInfo           *w_c_info;
     Widget parent;
     Arg args[MAX_RESOURCES];           /* Args to be Set in local resources */

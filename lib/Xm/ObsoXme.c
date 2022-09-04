@@ -215,7 +215,7 @@ _XmNavigChangeManaged(
 void 
 _XmRedisplayGadgets(
         Widget w,
-        register XEvent *event,
+        XEvent *event,
         Region region )
 {
     XmeRedisplayGadgets( w, event, region );
@@ -315,8 +315,8 @@ _XmGMReplyToQueryGeometry(Widget widget,
 
 Boolean 
 _XmStringsAreEqual(
-        register char *in_str,
-        register char *test_str )
+        char *in_str,
+        char *test_str )
 {
     return XmeNamesAreEqual( in_str, test_str );
 }
@@ -346,8 +346,8 @@ _XmStringIsXmString(
 XmGadget 
 _XmInputInGadget(
         Widget wid,
-        register int x,
-        register int y )
+        int x,
+        int y )
 {
     return (XmGadget) XmObjectAtPoint( wid, x, y );
 }

@@ -94,7 +94,7 @@ int argc;
 char **argv;
 {
   Boolean            trace = False;
-  register int       n;
+  int       n;
   int                status;
   Arg                args[MAX_ARGS];
   String             dirname;

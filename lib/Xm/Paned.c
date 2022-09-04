@@ -140,7 +140,7 @@ static XtGeometryResult QueryGeometry(Widget, XtWidgetGeometry *,
 
 static void Destroy(Widget);
 static void Initialize(Widget, Widget, ArgList, Cardinal*);
-static void InsertChild(register Widget);
+static void InsertChild(Widget);
 static void Realize(Widget, Mask *, XSetWindowAttributes *);
 static void ConstraintDestroy(Widget), ReManageChildren(XmPanedWidget);
 static void ChangeManaged(Widget), Resize(Widget);
@@ -754,7 +754,7 @@ ChoosePaneToResize(XmPanedWidget pw,
 
     childP = NthPane(pw, _index);
     while(TRUE) {
-        register Pane pane = PaneInfo(*childP);
+        Pane pane = PaneInfo(*childP);
 	
         if ((rules < 3 || SatisfiesRule3(pane, shrink)) &&
 	    (rules < 2 || SatisfiesRule2(pane))         &&
@@ -950,7 +950,7 @@ static void
 GetPrefSizes(XmPanedWidget pw, Dimension *on_size, Dimension *off_size)
 {
     Widget *childP;
-    register Dimension sash_size, sizeused;
+    Dimension sash_size, sizeused;
     Boolean vert = IsVert(pw);
 
     if (on_size != NULL) {
@@ -969,7 +969,7 @@ GetPrefSizes(XmPanedWidget pw, Dimension *on_size, Dimension *off_size)
 	      childP < (XmPaned_managed_children(pw)
 			   + XmPaned_num_panes(pw));
 	      childP++) {
-	    register Pane pane = PaneInfo(*childP);
+	    Pane pane = PaneInfo(*childP);
 	    ASSIGN_MAX(pane->size, (int) pane->min);
 	    ASSIGN_MIN(pane->size, (int) pane->max);
 	    sizeused += (int) pane->size + 2 * (*childP)->core.border_width;
@@ -1032,7 +1032,7 @@ GetPrefSizes(XmPanedWidget pw, Dimension *on_size, Dimension *off_size)
 static Boolean
 RefigureLocations(XmPanedWidget pw, int paneindex, Direction dir)
 {
-    register Widget *childP;
+    Widget *childP;
     int pane_size = (int) PaneSize( (Widget) pw, IsVert(pw) );
     Dimension sizeused;
     Position loc = 0;
@@ -1130,7 +1130,7 @@ RefigureLocations(XmPanedWidget pw, int paneindex, Direction dir)
 static void 
 CommitNewLocations(XmPanedWidget pw, Widget no_resize_child)
 {
-    register Widget *childP;
+    Widget *childP;
     XWindowChanges changes;
     XWindowChanges sep;
     int	offset, sash_size;
@@ -1150,9 +1150,9 @@ CommitNewLocations(XmPanedWidget pw, Widget no_resize_child)
     for ( childP = XmPaned_managed_children(pw) ;
 	  childP < XmPaned_managed_children(pw) + XmPaned_num_panes(pw);
 	  childP++ ) {
-	register Pane pane = PaneInfo(*childP);
-	register Widget sash = pane->sash; /* may be NULL. */
-	register Widget separator = pane->separator; /* may be NULL. */
+	Pane pane = PaneInfo(*childP);
+	Widget sash = pane->sash; /* may be NULL. */
+	Widget separator = pane->separator; /* may be NULL. */
 	int internal_space;
 
 	if (HasSash(*childP))
@@ -1559,7 +1559,7 @@ static void
 ProcessKeyEvent(XtPointer client_data, XtIntervalId *id)
 {
     Widget sash = (Widget) client_data;
-    register XmPanedWidget pw = (XmPanedWidget) XtParent(sash);
+    XmPanedWidget pw = (XmPanedWidget) XtParent(sash);
     Widget *childP;
     int i;
     
@@ -2123,7 +2123,7 @@ GeometryManager(Widget w, XtWidgetGeometry *request, XtWidgetGeometry *reply)
     XtGeometryMask mask = request->request_mode;
     Dimension old_size, old_wpsize, old_wp_off_size, old_paned_size;
     Pane pane = PaneInfo(w);
-    register Boolean vert = IsVert(pw);
+    Boolean vert = IsVert(pw);
     Dimension on_size, off_size;
     XtGeometryResult result;
     Boolean almost = FALSE;
@@ -2375,7 +2375,7 @@ Destroy(Widget w)
  */
 
 static void 
-InsertChild(register Widget w)
+InsertChild(Widget w)
 {
    XmPanedWidget pw = (XmPanedWidget) XtParent(w);
    Pane pane = PaneInfo(w);
@@ -2645,7 +2645,7 @@ SetValues(Widget old, Widget request, Widget set,
     XmPanedWidget old_pw = (XmPanedWidget) old;
     XmPanedWidget set_pw = (XmPanedWidget) set;
     int num_panes = XmPaned_num_panes(set_pw);
-    register Widget *childP;
+    Widget *childP;
     Boolean refigure = False, commit = False;
     Arg sargs[3];
     int num_sargs = 0;

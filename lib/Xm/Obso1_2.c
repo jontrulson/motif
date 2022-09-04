@@ -243,9 +243,9 @@ void _XmDrawShadow (Display *display, Drawable d,
 {
    static XRectangle * rects = NULL;
    static int rect_count = 0;
-   register int i;
-   register int size2;
-   register int size3;
+   int i;
+   int size2;
+   int size3;
 
    if (size <= 0) return;
    if (size > width / 2) size = width / 2;
@@ -345,9 +345,9 @@ void _XmGetArrowDrawRects (int highlight_thickness, int shadow_thickness, unsign
    /*  Arrow rectangle generation function  */
 
    int size, width, start;
-   register int y;
+   int y;
    XRectangle *tmp;
-   register int temp;
+   int temp;
    short t = 0;
    short b = 0;
    short c = 0;
@@ -525,7 +525,7 @@ void _XmGetArrowDrawRects (int highlight_thickness, int shadow_thickness, unsign
    {
       case XmARROW_LEFT:
       {
-          register int i; 
+          int i; 
 
           i = -1;
           do
@@ -559,9 +559,9 @@ void _XmGetArrowDrawRects (int highlight_thickness, int shadow_thickness, unsign
 
       case XmARROW_RIGHT:
       {
-          register int h_right = core_height - 2;
-          register int w_right = core_width - 2;
-          register int i; 
+          int h_right = core_height - 2;
+          int w_right = core_width - 2;
+          int i; 
 
           i = -1;
           do
@@ -606,9 +606,9 @@ void _XmGetArrowDrawRects (int highlight_thickness, int shadow_thickness, unsign
 
       case XmARROW_DOWN:
       {
-          register int w_down = core_width - 2;
-          register int h_down = core_height - 2;
-          register int i; 
+          int w_down = core_width - 2;
+          int h_down = core_height - 2;
+          int i; 
 
           i = -1;
           do
@@ -648,7 +648,7 @@ void _XmGetArrowDrawRects (int highlight_thickness, int shadow_thickness, unsign
  
 void _XmOffsetArrow (int diff_x, int diff_y, XRectangle *top, XRectangle *cent, XRectangle *bot, int top_count, int cent_count, int bot_count)
 {
-   register int i;
+   int i;
 
    if (diff_x != 0 || diff_y != 0)
    {
@@ -944,18 +944,18 @@ static int rect_count = 0;
 static void
 get_rects(
 int max_i,
-register int offset,
-register int x,
-register int y,
-register int width,
-register int height,
-register int pos_top,
-register int pos_left,
-register int pos_bottom,
-register int pos_right)
+int offset,
+int x,
+int y,
+int width,
+int height,
+int pos_top,
+int pos_left,
+int pos_bottom,
+int pos_right)
 {
-   register int i;
-   register int offsetX2;
+   int i;
+   int offsetX2;
    
    for (i = 0; i < max_i; i++, offset++)
    {
@@ -1000,11 +1000,11 @@ Display * display,
 Drawable d,
 GC top_GC,
 GC bottom_GC,
-register int size,
-register int x,
-register int y,
-register int width,
-register int height)
+int size,
+int x,
+int y,
+int width,
+int height)
 {
    int half_size;
    int size2;
@@ -1180,7 +1180,7 @@ _XmFileSelectionBoxCreateDirList(
         XmFileSelectionBoxWidget fsb )
 {
 	Arg		al[20];
-	register int	ac = 0;
+	int	ac = 0;
             XtCallbackProc callbackProc ;
 /****************/
 
@@ -1645,7 +1645,7 @@ _XmHeapAlloc(
         XmHeap heap,
         Cardinal bytes )
 {
-    register char* heap_loc;
+    char* heap_loc;
     if (heap == NULL) return XtMalloc(bytes);
     if (heap->bytes_remaining < bytes) {
 	if ((bytes + sizeof(char*)) >= (heap->segment_size>>1)) {
@@ -1821,7 +1821,7 @@ static Boolean
 _isISO(
         String charset )
 {
-  register int	i;
+  int	i;
   
   if (strlen(charset) == 5) 
     {
@@ -1900,10 +1900,10 @@ _XmGetWrapperData (WidgetClass w_class)	/* unused */
 
 void 
 _XmLowerCase(
-         register char *source,
-         register char *dest )
+         char *source,
+         char *dest )
 {
-    register char ch;
+    char ch;
     int i;
 
     for (i = 0; (ch = *source) != 0 && i < 999; source++, dest++, i++) {

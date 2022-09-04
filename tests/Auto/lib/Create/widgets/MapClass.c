@@ -95,7 +95,7 @@ void
 SetupMotifClass()
 {
     static int	done=0;
-    register int	i=0;	/* Checkout #define MAXCLASS 55, if you add */
+    int	i=0;	/* Checkout #define MAXCLASS 55, if you add */
 				/* more classes (loc mvs_defines.h) */
     if (done == 0) {
 	done++;
@@ -348,7 +348,7 @@ int ref_typ;
 {
     static int	first_time = 0;
     ClassRef	*result = MotifClasses;
-    register int i=0, int_val;
+    int i=0, int_val;
 
     if (first_time == 0) {
 	SetupMotifClass();

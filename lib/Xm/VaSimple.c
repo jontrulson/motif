@@ -245,7 +245,7 @@ _XmTypedArgToArg(
 {     
     String              to_type = NULL;
     XrmValue            from_val, to_val;
-    register int        i;
+    int        i;
       
 
     if (widget == NULL) {
@@ -516,7 +516,7 @@ XmVaCreateSimpleMenuBar(Widget parent, String name, ...)
 #define MB_EXTRA_ARGS 1
 
     va_list		var;
-    register Widget	widget;
+    Widget	widget;
     ArgList		args;
     int			button_count, args_count, typed_count, total_count;
     int			n, num_args;
@@ -585,7 +585,7 @@ XmVaCreateSimplePulldownMenu(Widget parent, String name, int post_from_button, X
 #define PD_EXTRA_ARGS 3
 
     va_list		var;
-    register Widget	widget;
+    Widget	widget;
     Arg			*args;
     int			button_count, args_count, typed_count, total_count;
     int			n, num_args;
@@ -660,7 +660,7 @@ XmVaCreateSimplePopupMenu(Widget parent, String name, XtCallbackProc callback, .
 
 
     va_list		var;
-    register Widget	widget;
+    Widget	widget;
     Arg			*args;
     int			button_count, args_count, typed_count, total_count;
     int			n, num_args;
@@ -734,7 +734,7 @@ XmVaCreateSimpleOptionMenu(Widget parent, String name, XmString option_label, Ke
 
 
     va_list		var;
-    register Widget	widget;
+    Widget	widget;
     Arg			*args;
     int			button_count, args_count, typed_count, total_count;
     int			n, num_args;
@@ -810,7 +810,7 @@ XmVaCreateSimpleRadioBox(Widget parent, String name, int button_set, XtCallbackP
 #define RB_EXTRA_ARGS 3
 
     va_list		var;
-    register Widget	widget;
+    Widget	widget;
     Arg			*args;
     int			button_count, args_count, typed_count, total_count;
     int			n, num_args;
@@ -884,7 +884,7 @@ XmVaCreateSimpleCheckBox(Widget parent, String name, XtCallbackProc callback, ..
 #define CB_EXTRA_ARGS 2
 
     va_list		var;
-    register Widget	widget;
+    Widget	widget;
     Arg			*args;
     int			button_count, args_count, typed_count, total_count;
     int			n, num_args;

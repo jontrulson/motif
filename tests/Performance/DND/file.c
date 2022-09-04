@@ -233,7 +233,7 @@ processFile (char *name, char *includeName)
 	     */
 	    if (includeName && name[0] != '/')
 	    {
-		register char *slash;
+		char *slash;
 		
 		strcpy (fileName, includeName);
 		slash = strrchr(fileName, '/');
@@ -315,12 +315,12 @@ static struct fileInfo *
 processDir(char *name)
 {
     DIR *dirf;
-    register struct dirent *dentp;
+    struct dirent *dentp;
     int numchests = 0;
     char **chestnames = NULL;
     char filename[PATH_MAX+1];
     int dirnamelen;
-    register int i;
+    int i;
     struct fileInfo *curFile;
     struct fileInfo *firstFile = NULL;
     struct fileInfo *lastFile=NULL;

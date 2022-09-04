@@ -3215,7 +3215,7 @@ AdjustTearOffControl (Widget cascade,
        the menuActive field of the global data has not yet been set, then
        we can safely assume that we have just cascaded off of a torn off
        menu. In that case, set the menuActive field to be the menu spec of
-       the torn off menu and register an unmap callback on the cascaded
+       the torn off menu and an unmap callback on the cascaded
        menu that will clear the menuActive field. */
     if (cbackdata != (XtPointer) NULL && wmGD.menuActive == (MenuSpec *) NULL)
     {

@@ -158,7 +158,7 @@ void  main(argc, argv)
      int	argc;
      char	*argv[];
 {
-    register int  n;
+    int  n;
     Arg           args[MAX_ARGS];
     XmString      tcs;
 
@@ -416,7 +416,7 @@ void PasteItemFromClipboard(textw)
     int 		private_id = 0; /* id of item on clipboard      */
 #endif /* MOTIF1_1 */
     XmTextPosition	cursorPos;	/* text cursor position		*/
-    register int	ac;		/* arg count			*/
+    int	ac;		/* arg count			*/
     Arg			al[10];		/* arg list			*/
     int                 status = 0;
 

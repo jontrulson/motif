@@ -37,9 +37,9 @@ void XtUnmanageChildren(children, num_children)
     WidgetList children;
     Cardinal num_children;
 {
-    register CompositeWidget	parent;
-    register Widget		child;
-    register Cardinal		num_unique_children, i;
+    CompositeWidget	parent;
+    Widget		child;
+    Cardinal		num_unique_children, i;
 	     XtWidgetProc	change_managed;
 	     Bool		parent_realized;
 
@@ -117,11 +117,11 @@ void XtManageChildren(children, num_children)
     Cardinal    num_children;
 {
 #define MAXCHILDREN 100
-    register CompositeWidget    parent;
-    register Widget		child;
-    register Cardinal		num_unique_children, i;
+    CompositeWidget    parent;
+    Widget		child;
+    Cardinal		num_unique_children, i;
 	     XtWidgetProc	change_managed;
-    register WidgetList		unique_children;
+    WidgetList		unique_children;
 	     Widget		cache[MAXCHILDREN];
 	     Bool		parent_realized;
 
@@ -233,12 +233,12 @@ void XtManageChild(child)
 
 #if NeedFunctionPrototypes
 void XtSetMappedWhenManaged(
-    register Widget widget,
+    Widget widget,
     _XtBoolean	    mapped_when_managed
     )
 #else
 void XtSetMappedWhenManaged(widget, mapped_when_managed)
-    register Widget widget;
+    Widget widget;
     Boolean	    mapped_when_managed;
 #endif
 {

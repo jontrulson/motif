@@ -121,8 +121,8 @@ static wchar_t* _Xmwcscat(wchar_t *ws1, const wchar_t *ws2)
 static wchar_t* _Xmwcsncat(wchar_t *ws1, const wchar_t *ws2, size_t n)
 {
         if (n != 0) {
-                register wchar_t *d = ws1;
-                register const wchar_t *s = ws2;
+                wchar_t *d = ws1;
+                const wchar_t *s = ws2;
 
                 while (*d != 0)
                         d++;
@@ -10078,7 +10078,7 @@ XmTextFieldSetEditable(Widget w,
 
   _XmAppLock(app); 
   /* if widget previously wasn't editable, no input method has yet been
-   * registered.  So, if we're making it editable now, register the IM and
+   * registered.  So, if we're making it editable now, the IM and
    * give the IM the relevent values. */
   
   if (!TextF_Editable(tf) && editable) { 
@@ -10589,7 +10589,7 @@ XmVaCreateTextField(
         char *name,
         ...)
 {
-    register Widget w;
+    Widget w;
     va_list var;
     int count;
     

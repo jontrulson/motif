@@ -71,7 +71,7 @@ void  main(argc, argv)
     int     argc;
     char  **argv;
 {
-    register int  n;
+    int  n;
     Arg           args[MAX_ARGS];
     XmString      tcs, tcs2, tcs3, tcs4, ItemList[NITEMS];
     int 	  i;
@@ -268,7 +268,7 @@ static void PostDialog(w, client_data, call_data)
     XtPointer  client_data;
     XtPointer  call_data;
 {
-    register int n;
+    int n;
     Arg args[10];
     short 	col;
     Dimension 	width;

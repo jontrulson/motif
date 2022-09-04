@@ -1630,7 +1630,7 @@ TextFieldDestinationCallback(Widget w,
 
   /*
    ** In case of a primary transfer operation where a location_data
-   ** has been allocated, register a done proc to be called when 
+   ** has been allocated, a done proc to be called when 
    ** the data transfer is complete to free the location_data
    */
   if (ds->selection == XA_PRIMARY && ds->location_data)

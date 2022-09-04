@@ -1170,9 +1170,9 @@ static void
 DrawSliderPixmap(
         XmScrollBarWidget sbw )
 {
-   register int slider_width = sbw->scrollBar.slider_width;
-   register int slider_height = sbw->scrollBar.slider_height;
-   register Drawable slider = sbw->scrollBar.pixmap;
+   int slider_width = sbw->scrollBar.slider_width;
+   int slider_height = sbw->scrollBar.slider_height;
+   Drawable slider = sbw->scrollBar.pixmap;
 
    if ((sbw->scrollBar.slider_visual ==  XmFOREGROUND_COLOR) ||
        (sbw->scrollBar.slider_visual ==  XmTROUGH_COLOR)) {   
@@ -1655,8 +1655,8 @@ Resize(
         Widget wid )
 {
     XmScrollBarWidget sbw = (XmScrollBarWidget) wid ;
-    register int ht = sbw->primitive.highlight_thickness;
-    register int st = sbw->primitive.shadow_thickness;
+    int ht = sbw->primitive.highlight_thickness;
+    int st = sbw->primitive.shadow_thickness;
 
 #define CHECK(x) if (x <= 0) x = 1 
 
@@ -3979,10 +3979,10 @@ static Boolean
 ChangeScrollBarValue(
         XmScrollBarWidget sbw )
 {
-    register unsigned char change_type = sbw->scrollBar.change_type;
-    register int change_amount = 0;
-    register Boolean returnFlag = TRUE;
-    register int old_value = sbw->scrollBar.value;
+    unsigned char change_type = sbw->scrollBar.change_type;
+    int change_amount = 0;
+    Boolean returnFlag = TRUE;
+    int old_value = sbw->scrollBar.value;
     
     if (! (sbw->scrollBar.flags & SLIDER_AVAILABLE))
 	return(FALSE);

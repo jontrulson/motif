@@ -52,9 +52,9 @@ _XmAddCallback(InternalCallbackList* callbacks,
 	       XtCallbackProc        callback,
 	       XtPointer             closure)
 {
-  register XtCallbackList cl;
-  register InternalCallbackList icl = *callbacks;
-  register int count = icl ? icl->count : 0;
+  XtCallbackList cl;
+  InternalCallbackList icl = *callbacks;
+  int count = icl ? icl->count : 0;
   
   if (icl && icl->call_state) 
     {
@@ -86,9 +86,9 @@ void
 		    XtCallbackProc        callback,
 		    XtPointer             closure)
 {
-  register int i, j;
-  register XtCallbackList cl, ncl, ocl;
-  register InternalCallbackList icl = *callbacks;
+  int i, j;
+  XtCallbackList cl, ncl, ocl;
+  InternalCallbackList icl = *callbacks;
 
   if (!icl) 
     return;
@@ -148,7 +148,7 @@ void
 void
 _XmRemoveAllCallbacks(InternalCallbackList *callbacks)
 {
-  register InternalCallbackList icl = *callbacks;
+  InternalCallbackList icl = *callbacks;
   
   if (icl) 
     {
@@ -166,9 +166,9 @@ _XmCallCallbackList(Widget widget,
 		    XtCallbackList callbacks,
 		    XtPointer call_data)
 {
-  register InternalCallbackList icl;
-  register XtCallbackList cl;
-  register int i;
+  InternalCallbackList icl;
+  XtCallbackList cl;
+  int i;
   char ostate;
   
   if (!callbacks) 

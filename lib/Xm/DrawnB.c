@@ -1628,7 +1628,7 @@ XmVaCreateDrawnButton(
         char *name,
         ...)
 {
-    register Widget w;
+    Widget w;
     va_list var;
     int count;
     

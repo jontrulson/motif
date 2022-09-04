@@ -40,7 +40,7 @@ _XmTextFindStringBackwards(Widget w,
 			   char* search_string,
 			   XmTextPosition *position)
 {
-  register int i;
+  int i;
   XmTextWidget tw = (XmTextWidget) w;
   XmSourceData data = ((XmTextWidget)w)->text.source->data;
   Boolean return_val = False, match = False;
@@ -503,7 +503,7 @@ _XmTextFindStringForwards(Widget w,
 			  char* search_string,
 			  XmTextPosition *position)
 {
-  register int i;
+  int i;
   XmTextWidget tw = (XmTextWidget) w;
   XmSourceData data = tw->text.source->data;
   Boolean return_val = False, match = False;

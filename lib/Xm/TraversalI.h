@@ -190,16 +190,16 @@ extern Boolean _XmGetPointVisibility(Widget w,
 				     int root_x, 
 				     int root_y);
 extern void _XmSetRect( 
-                        register XRectangle *rect,
+                        XRectangle *rect,
                         Widget w) ;
 extern int _XmIntersectRect( 
-                        register XRectangle *srcRectA,
-                        register Widget widget,
-                        register XRectangle *dstRect) ;
+                        XRectangle *srcRectA,
+                        Widget widget,
+                        XRectangle *dstRect) ;
 extern int _XmEmptyRect( 
-                        register XRectangle *r) ;
+                        XRectangle *r) ;
 extern void _XmClearRect( 
-                        register XRectangle *r) ;
+                        XRectangle *r) ;
 extern Boolean _XmIsNavigable( 
                         Widget wid) ;
 extern void _XmWidgetFocusChange( 
@@ -234,9 +234,9 @@ extern Boolean _XmGetEffectiveView(
                         Widget wid,
                         XRectangle *visRect) ;
 extern Boolean _XmIntersectionOf( 
-                        register XRectangle *srcRectA,
-                        register XRectangle *srcRectB,
-                        register XRectangle *destRect) ;
+                        XRectangle *srcRectA,
+                        XRectangle *srcRectB,
+                        XRectangle *destRect) ;
 extern XmNavigationType _XmGetNavigationType( 
                         Widget widget) ;
 extern Widget _XmGetActiveTabGroup( 

@@ -375,7 +375,7 @@ void PasteItemFromClipboard()
    unsigned long outlength = 0;		      /* length of bytes copied	 */
    long private_id = 0;	      		      /* id of item on clipboard */
    XmTextPosition cursorPos;		      /* text cursor position 	 */
-   register int n;			      /* arg count  	      	 */
+   int n;			      /* arg count  	      	 */
    Arg args[10];			      /* arg list	      	 */
 
    /* find the length of the paste item, continue till the length is found */
@@ -439,7 +439,7 @@ Widget		w;		/*  widget id		*/
 XtPointer		client_data;	/*  data from application   */
 XtPointer		call_data;	/*  data from widget class  */
 {
-	register int n;		/* arg count		    */
+	int n;		/* arg count		    */
 	Arg args[10];			/* arg list		    */
 	char *command;			/* command used in printing */
 
@@ -800,9 +800,9 @@ int		argcount;
 	Pixel		foreground;	/*  dialog foreground		  */
 	Pixel		background;	/*  dialog background		  */
 	Pixmap		pixmap;		/*  dialog pixmap		  */
-        register int    i;              /*  kid index			  */
+        int    i;              /*  kid index			  */
         Arg             args[10];         /*  arg list		          */
-        register int    n;             /*  arg count		          */
+        int    n;             /*  arg count		          */
 
 
 	warning_dialog = XmCreatePromptDialog(parent, name, arglist, argcount);
@@ -881,7 +881,7 @@ Widget	file_button;
 	Widget			menu_pane;
 	XImage			*image;		/*  image for warning pixmap	*/
 	Widget			button;		/*  PushButton			*/
-	register int 	n;			/* arg count 	      	 */
+	int 	n;			/* arg count 	      	 */
 	Arg 			args[10];		/* arg list		   	 */
 
 	/*	Create "File" PulldownMenu.
@@ -1033,7 +1033,7 @@ Widget		edit_button;
 	Widget			menu_pane;
 	XImage			*image;		/*  image for warning pixmap	*/
 	Widget			button;		/*  PushButton			*/
-	register int 	n;			/* arg count 	      	 */
+	int 	n;			/* arg count 	      	 */
 	Arg 			args[10];		/* arg list		   	 */
 
 	/*	Create "Edit" PulldownMenu.
@@ -1128,7 +1128,7 @@ Widget		parent;
 	XImage		*image;		/*  image for warning pixmap	*/
 
 	Arg		args[10];		/*  arg list			*/
-	register int	n;		/*  arg count			*/
+	int	n;		/*  arg count			*/
 
 	/*	Create MenuArea.
 	*/
@@ -1203,8 +1203,8 @@ static void CreateText (parent)
 Widget		parent;
 {
 	Arg		args[10];		/*  arg list		*/
-	register int	n;		/*  arg count		*/
-	register int	i;		/*  counter		*/
+	int	n;		/*  arg count		*/
+	int	i;		/*  counter		*/
    	XFontStruct * newfont;
 
 	/* create text widget */
@@ -1239,8 +1239,8 @@ char 		**argv;
 	Widget		form;		/*  Form		*/
 
 	Arg		args[10];		/*  arg list		*/
-	register int	n;		/*  arg count		*/
-	register int	i;		/*  counter		*/
+	int	n;		/*  arg count		*/
+	int	i;		/*  counter		*/
 	char	c;
 	char	progname[MAX_NAME_LEN + 1];
 

@@ -182,7 +182,7 @@ void
 _XmInitializeSyntheticResources(XmSyntheticResource *resources,
 				int num_resources )
 {
-  register int i;
+  int i;
   
   for (i = 0; i < num_resources; i++)
     resources[i].resource_name = 

@@ -79,7 +79,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg      args[10];
-    register int n;
+    int n;
 
     n=0;
     XtSetArg (args[n], XmNdialogType, XmDIALOG_WARNING); 	n++;
@@ -96,7 +96,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
 
     n = 0;
     XtSetArg (args[n], XmNdialogType, XmDIALOG_WORKING); 	n++;
@@ -113,7 +113,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
 
     n = 0;
     XtSetArg (args[n], XmNdialogType, XmDIALOG_INFORMATION); 	n++;
@@ -127,7 +127,7 @@ unsigned int argc;
 char **argv;
 {
     Arg             args[10];           /*  arg list            */
-    register int    n;                  /*  arg count           */
+    int    n;                  /*  arg count           */
     /* for test for PIR 4070 */
     Widget textfield, bb, button[3];
     int i;

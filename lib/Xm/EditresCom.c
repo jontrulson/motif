@@ -160,7 +160,7 @@ static char *DoGetGeometry(), *DoGetResources(), *DumpValues();
 #ifndef HAVE_XMU_N_COPY_ISO
 void _XmNCopyISOLatin1Lowered(char *dst, char *src, int size)
 {
-    register unsigned char *dest, *source;
+    unsigned char *dest, *source;
     int bytes;
 
     if (size <= 0)
@@ -281,7 +281,7 @@ unsigned long length;
     EditresEvent * event;
     ProtocolStream alloc_stream, *stream;
     unsigned char temp;
-    register unsigned int i;
+    unsigned int i;
 
     stream = &alloc_stream;	/* easier to think of it this way... */
 
@@ -792,9 +792,9 @@ WidgetInfo *info;
 {
     Widget top;
 
-    register int count;
-    register Widget parent;
-    register unsigned long * child;
+    int count;
+    Widget parent;
+    unsigned long * child;
 
     for (top = w; XtParent(top) != NULL; top = XtParent(top)) {}
 
@@ -838,7 +838,7 @@ EditresEvent * event;
 ProtocolStream * stream;
 {
     char * str;
-    register unsigned i;
+    unsigned i;
     unsigned short count = 0;
     SetValuesEvent * sv_event = (SetValuesEvent *) event;
     
@@ -1086,7 +1086,7 @@ ProtocolStream * stream;
 static Bool isApplicationShell(w)
     Widget w;
 {
-    register WidgetClass c;
+    WidgetClass c;
 
     if (!XtIsTopLevelShell(w))
 	return False;
@@ -1449,7 +1449,7 @@ ProtocolStream * stream;
 {
     XtResourceList norm_list, cons_list;
     Cardinal num_norm, num_cons;
-    register int i;
+    int i;
 
     /* 
      * Get Normal Resources. 
@@ -1748,7 +1748,7 @@ Widget w;
 {
     Widget temp;
     unsigned long * widget_list;
-    register int i, num_widgets;
+    int i, num_widgets;
 
     for (temp = w, i = 0; temp != 0; temp = XtParent(temp), i++) {}
 
@@ -2020,7 +2020,7 @@ ProtocolStream * stream;
 char ** str;
 {
     unsigned short len;
-    register unsigned i;
+    unsigned i;
 
     if (!_XEditResGet16(stream, &len)) {
 	return(FALSE);

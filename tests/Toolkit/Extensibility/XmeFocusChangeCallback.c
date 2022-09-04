@@ -49,7 +49,7 @@ int argc;
 char **argv;
 {
   Boolean            trace = False;
-  register int       n;
+  int       n;
   Arg                args[MAX_ARGS];
   XmString           xmstr;
   Widget             vshell, button;

@@ -117,7 +117,7 @@ char **argv;
 {
     Widget        command, Frame;
     Arg           args[10];
-    register int  n;      
+    int  n;      
     Widget        unManageList[5];
     XmString      stringList[15];
     XmString      commandString;

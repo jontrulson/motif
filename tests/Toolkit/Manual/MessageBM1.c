@@ -94,7 +94,7 @@ unsigned int argc;
 char **argv;
 {
   Arg args[10];       
-  register int n;    
+  int n;    
   XmString tcs, tcs1;
   Widget Frame;
   Pixmap smilemap, mtnmap;

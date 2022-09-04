@@ -899,7 +899,7 @@ _XmGeoMatrixGet(
         XmGeoMatrix geoSpec,
         int geoType )               /* XmGET_PREFERRED_SIZE or */
 {
-    register XmKidGeometry   boxPtr ;
+    XmKidGeometry   boxPtr ;
             XmKidGeometry   rowPtr ;
             XmGeoRowLayout  layoutPtr ;
             XtWidgetGeometry * request ;
@@ -950,8 +950,8 @@ void
 _XmGeoMatrixSet(
         XmGeoMatrix geoSpec )
 {
-    register XmKidGeometry   rowPtr ;
-    register XmGeoRowLayout  layoutPtr ;
+    XmKidGeometry   rowPtr ;
+    XmGeoRowLayout  layoutPtr ;
             Boolean         fixUps = FALSE ;
 /****************/
 
@@ -1025,8 +1025,8 @@ void
 _XmGeoAdjustBoxes(
         XmGeoMatrix geoSpec )
 {
-    register XmKidGeometry   rowPtr ;
-    register XmKidGeometry   boxPtr ;
+    XmKidGeometry   rowPtr ;
+    XmKidGeometry   boxPtr ;
             XmGeoRowLayout  layoutPtr ;
             Dimension       globalSetBorder ;
             Dimension       globalBorder ;
@@ -1076,8 +1076,8 @@ void
 _XmGeoGetDimensions(
         XmGeoMatrix geoSpec )
 {
-    register XmKidGeometry   rowPtr ;
-    register XmKidGeometry   boxPtr ;
+    XmKidGeometry   rowPtr ;
+    XmKidGeometry   boxPtr ;
             XmGeoRowLayout  layoutPtr ;
             Dimension       boxH ;
             Dimension       rowH ;
@@ -1194,8 +1194,8 @@ _XmGeoStretchVertical(
         Dimension desiredH )
 #endif /* NeedWidePrototypes */
 {   
-    register XmGeoRowLayout  layoutPtr ;
-    register XmKidGeometry   rowPtr ;
+    XmGeoRowLayout  layoutPtr ;
+    XmKidGeometry   rowPtr ;
             int             fillOffset ;
             int             stretchableSpace ;
             int             deltaY ;
@@ -1306,8 +1306,8 @@ _XmGeoFillVertical(
         Dimension desiredH )
 #endif /* NeedWidePrototypes */
 {   
-    register XmGeoRowLayout  layoutPtr ;
-    register XmKidGeometry   rowPtr ;
+    XmGeoRowLayout  layoutPtr ;
+    XmKidGeometry   rowPtr ;
             unsigned long   fillAmount ;
             unsigned long   totalSpecSpace ;
             Dimension       marginH ;
@@ -1886,7 +1886,7 @@ _XmGeoLayoutWrap(
             Dimension       boxH ;
             int             deltaW ;
             XmKidGeometry   rowBegin ;
-    register XmKidGeometry  boxPtr ;
+    XmKidGeometry  boxPtr ;
             Position        endX ;
 /****************/
 
@@ -2134,8 +2134,8 @@ _XmGeoBoxesSameWidth(
         Dimension width )
 #endif /* NeedWidePrototypes */
 {
-    register XmKidGeometry   boxPtr ;
-    register Dimension       useW ;
+    XmKidGeometry   boxPtr ;
+    Dimension       useW ;
 /****************/
 
     useW = width ;  /* Setup default width of each box in row, as specified.*/
@@ -2180,8 +2180,8 @@ _XmGeoBoxesSameHeight(
         Dimension height )
 #endif /* NeedWidePrototypes */
 {
-    register XmKidGeometry   boxPtr ;
-    register Dimension       useH ;
+    XmKidGeometry   boxPtr ;
+    Dimension       useH ;
 /****************/
 
     useH = height ; /* Setup default height of each box in row, as specified.*/
@@ -2223,8 +2223,8 @@ _XmSeparatorFix(
         XmGeoMajorLayout layoutPtr, /* unused */
         XmKidGeometry rowPtr )
 {
-    register Dimension       marginW ;
-    register Dimension       twoMarginW ;
+    Dimension       marginW ;
+    Dimension       twoMarginW ;
 /****************/
 
     marginW = geoSpec->margin_w ;
@@ -2273,9 +2273,9 @@ _XmMenuBarFix(
         XmGeoMajorLayout layoutPtr, /* unused */
         XmKidGeometry rowPtr )
 {
-    register Dimension       marginW ;
-    register Dimension       marginH ;
-    register Dimension       twoMarginW ;
+    Dimension       marginW ;
+    Dimension       marginH ;
+    Dimension       twoMarginW ;
 /****************/
 
     marginW = geoSpec->margin_w ;
@@ -2363,9 +2363,9 @@ _XmGeoLoadValues(
  ****************/
 int 
 _XmGeoCount_kids(
-        register CompositeWidget c )
+        CompositeWidget c )
 {   
-    register int i, n = 0 ;
+    int i, n = 0 ;
 /****************/
 
     for(    i = 0 ; i < c->composite.num_children ; i++    )

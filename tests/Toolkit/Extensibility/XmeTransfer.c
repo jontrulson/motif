@@ -269,7 +269,7 @@ XErrorEvent	*ev;
 int 
 main (int argc, char **argv)
 {
-  register int       n;
+  int       n;
   Arg                args[MAX_ARGS], dropSiteArgs[6];
   Widget       	     topLevel, grid;
   char               name[80];
@@ -470,7 +470,7 @@ main (int argc, char **argv)
 static Widget  CreatePushButton(Widget parent, char *label)
 {
 	Widget          widget;
-	register int	n;
+	int	n;
 	Arg		args[3];
 	XmString	tcs;
 

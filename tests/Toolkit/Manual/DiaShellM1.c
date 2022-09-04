@@ -274,7 +274,7 @@ void  main(argc, argv)
     char  **argv;
 {
 
-    register int  n;
+    int  n;
     Arg           args[MAX_ARGS];
     XmString      tcs;
     Widget        TopShell1, TopShell2;

@@ -51,7 +51,7 @@ _XmNotifyChildrenVisual(
         Widget new_w,
         Mask visual_flag)
 {
-   register int i;
+   int i;
    Widget child;
    Boolean redisplay = False;
    XmCareVisualTrait care_visual ;

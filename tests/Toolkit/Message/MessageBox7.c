@@ -75,7 +75,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg      args[10];
-    register int n;
+    int n;
     Widget   child=NULL;
 
     if (manage) {
@@ -131,7 +131,7 @@ unsigned int argc;
 char **argv;
 {
     Arg             args[10];
-    register int    n;      
+    int    n;      
     Widget	    Frame;
 
     /*  initialize toolkit  */

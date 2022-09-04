@@ -153,7 +153,7 @@ static void CreateBBPopup()
     Widget	  pb1, pb2, pb3, tb1;
     Widget	  label1;
     Arg           args[MAX_ARGS];
-    register int  n;
+    int  n;
     char *startString;
 
     n = 0;

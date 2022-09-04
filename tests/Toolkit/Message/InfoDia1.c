@@ -84,7 +84,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
     static int minimize = False;
 
     if (minimize) {
@@ -112,7 +112,7 @@ XtPointer     client_data;                 /*  data from application   */
 XtPointer     call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
 
     n=0;
     XtSetArg (args[n], XmNwidth, 500); n++;
@@ -128,7 +128,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
 
     n=0;
     XtSetArg (args[n], XmNheight, 300); n++;
@@ -142,7 +142,7 @@ unsigned int argc;
 char **argv;
 {
     Arg             args[10];           /*  arg list            */
-    register int    n;                  /*  arg count           */
+    int    n;                  /*  arg count           */
 
     /*  initialize toolkit  */
     CommonTestInit(argc, argv);

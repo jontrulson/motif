@@ -56,7 +56,7 @@ static void ButtonPressed(Widget w, caddr_t call_data, caddr_t client_data)
 static Widget CreateLabel(char *label, Widget parent, char *name)
 {
   Widget widget;
-  register int  n;
+  int  n;
   Arg args[MAX_ARGS];
   XmString tcs;
 
@@ -76,7 +76,7 @@ static Widget CreatePushButton(char *label, char mnemonic, char *accel,
 			       char *accelText, Widget parent, char *name)
 {
     Widget widget;
-    register int  n;
+    int  n;
     Arg args[MAX_ARGS];
     XmString tcs, tcs2;
 
@@ -118,7 +118,7 @@ static Widget CreatePullDown(Widget parent, char *name)
 
 int main(int argc, char **argv)
 {
-    register int  n;
+    int  n;
     Arg args[MAX_ARGS];
     XmString tcs;
     char *char_set;

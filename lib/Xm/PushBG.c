@@ -2573,7 +2573,7 @@ static void
 Resize(
         Widget w )
 {
-  register XmPushButtonGadget pb = (XmPushButtonGadget) w;
+  XmPushButtonGadget pb = (XmPushButtonGadget) w;
   
   if (LabG_IsPixmap(w)) 
     SetPushButtonSize(pb);

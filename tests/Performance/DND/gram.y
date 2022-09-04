@@ -72,7 +72,7 @@ spec	: INCLUDE string
 	    {
 		if ($6 != NULL);
 		{
-		    register struct menu *menu;
+		    struct menu *menu;
 		    
 		    menu = FindMenu($2, TRUE);
 		    /* if the menu already existed, add new items to end */
@@ -96,7 +96,7 @@ spec	: INCLUDE string
 		    }
 #ifdef TCMENU
 		    {
-			register struct menuEntry *entry;
+			struct menuEntry *entry;
 
 			for (entry = menu->firstMenuEntry; entry;
 			     entry = entry->next)

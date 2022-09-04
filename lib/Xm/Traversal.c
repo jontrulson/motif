@@ -1131,7 +1131,7 @@ _XmGetPointVisibility(Widget w,
 
 void 
 _XmSetRect(
-        register XRectangle *rect,
+        XRectangle *rect,
         Widget w )
 {
   /* Initialize the rectangle structure to the specified values.
@@ -1148,9 +1148,9 @@ _XmSetRect(
 
 int 
 _XmIntersectRect(
-        register XRectangle *srcRectA,
-        register Widget widget,
-        register XRectangle *dstRect )
+        XRectangle *srcRectA,
+        Widget widget,
+        XRectangle *dstRect )
 {
   /* Intersects the specified rectangle with the rectangle describing the
    * passed-in widget.  Returns True if they intersect, or False if they
@@ -1165,7 +1165,7 @@ _XmIntersectRect(
 
 int 
 _XmEmptyRect(
-        register XRectangle *r )
+        XRectangle *r )
 {
    if (r->width <= 0 || r->height <= 0)
       return (TRUE);
@@ -1175,7 +1175,7 @@ _XmEmptyRect(
 
 void 
 _XmClearRect(
-        register XRectangle *r )
+        XRectangle *r )
 {
    r->x = 0;
    r->y = 0;

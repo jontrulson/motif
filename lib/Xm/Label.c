@@ -603,7 +603,7 @@ InitializePosthook(Widget req,		/* unused */
 static void 
 ClassPartInitialize(WidgetClass c)
 {
-  register XmLabelWidgetClass wc = (XmLabelWidgetClass) c;
+  XmLabelWidgetClass wc = (XmLabelWidgetClass) c;
   XmLabelWidgetClass super = (XmLabelWidgetClass)wc->core_class.superclass;
   
   if (wc->label_class.setOverrideCallback == XmInheritSetOverrideCallback)
@@ -2393,7 +2393,7 @@ XmVaCreateLabel(
         char *name,
         ...)
 {
-    register Widget w;
+    Widget w;
     va_list var;
     int count;
     

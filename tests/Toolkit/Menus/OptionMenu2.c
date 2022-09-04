@@ -91,7 +91,7 @@ char *btn_labels1[MAX_BUTTONS] = {
 static Widget CreateLabel(char *label, Widget parent)
 {
   Widget widget;
-  register int  n;
+  int  n;
   Arg args[MAX_ARGS];
   XmString tcs;
 
@@ -108,7 +108,7 @@ static Widget CreateLabel(char *label, Widget parent)
 static Widget CreatePushButton(char *label, char mnemonic, Widget parent)
 {
     Widget widget;
-    register int  n;
+    int  n;
     Arg args[MAX_ARGS];
     XmString tcs;
 
@@ -126,7 +126,7 @@ static Widget CreatePushButton(char *label, char mnemonic, Widget parent)
 static Widget CreatePushButtonGadget(char *label, char mnemonic, Widget parent)
 {
     Widget widget;
-    register int  n;
+    int  n;
     Arg args[MAX_ARGS];
     XmString tcs;
 
@@ -158,7 +158,7 @@ static Widget CreatePullDown(Widget parent, char *name)
 
 int main(int argc, char **argv)
 {
-    register int  n;
+    int  n;
     Arg args[MAX_ARGS];
     XmString tcs;
     XFontStruct *newfont;

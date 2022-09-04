@@ -94,7 +94,7 @@ int main(argc, argv)
 int argc;
 char **argv;
 {
-    register int i,n;
+    int i,n;
     Arg args[MAX_ARGS];
     XmString tcs;
     Widget pointsList[3];

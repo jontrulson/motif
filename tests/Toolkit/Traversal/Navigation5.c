@@ -74,7 +74,7 @@ void traverse_cb(Widget w, XtPointer closure,
 static void TestObscuredTextField( RowColumn1, Text1 )
 Widget RowColumn1, Text1;
 {
-  register int n;
+  int n;
   Arg args[MAX_ARGS];
   Dimension textX, textY, textWid, textHgt;
   Dimension btnX, btnY, btnWid, btnHgt;
@@ -124,7 +124,7 @@ int argc;
 char **argv;
 {
 
-  register int  n;
+  int  n;
   Arg args[MAX_ARGS];
   XmString tcs;
 

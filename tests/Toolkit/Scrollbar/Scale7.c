@@ -68,7 +68,7 @@ main (unsigned int argc, char **argv)
 {
    Widget Scale1;
    Arg args[MAX_ARGS];
-   register int	n;
+   int	n;
    Widget label;
    Widget label1, label2, label3, label4, label5, label6, label7,
           label8, label9, label10, label11;

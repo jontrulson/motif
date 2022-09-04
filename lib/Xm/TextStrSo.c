@@ -366,8 +366,8 @@ _XmStringSourceGetChar(XmSourceData data,
 		       XmTextPosition position)       /* starting position */
 {
   /* gap_size is the number of character in the gap, not number of bytes */
-  register int gap_size;
-  register XmTextPosition char_pos;
+  int gap_size;
+  XmTextPosition char_pos;
   XmTextWidget tw = (XmTextWidget) data->widgets[0];
   int char_size;
   
@@ -708,9 +708,9 @@ _XmTextModifyVerify(XmTextWidget initiator,
 		    XmTextBlock newblock,	/* RETURN */
 		    Boolean *freeBlock)
 {
-  register XmSourceData data = initiator->text.source->data;
-  register long delta;
-  register int block_num_chars;  /* number of characters in the block */
+  XmSourceData data = initiator->text.source->data;
+  long delta;
+  int block_num_chars;  /* number of characters in the block */
   XmTextPosition newInsert = initiator->text.cursor_position;
   XmTextVerifyCallbackStruct tvcb;
   XmTextVerifyCallbackStructWcs wcs_tvcb;
@@ -945,10 +945,10 @@ Replace(XmTextWidget initiator,
         Boolean call_callbacks)	/* unused */
 #endif
 {
-  register XmSourceData data = initiator->text.source->data;
-  register int i;
-  register long delta;
-  register int block_num_chars;  /* number of characters in the block */
+  XmSourceData data = initiator->text.source->data;
+  int i;
+  long delta;
+  int block_num_chars;  /* number of characters in the block */
   int gap_size;
   int old_maxlength;
   int char_size = (initiator->text.char_size < 3 ?
@@ -1190,9 +1190,9 @@ Scan(XmTextSource source,
      Boolean include)
 #endif /* NeedWidePrototypes */
 {
-  register long whiteSpace = -1;
-  register XmTextPosition position = pos;
-  register int i;
+  long whiteSpace = -1;
+  XmTextPosition position = pos;
+  int i;
   XmTextPosition temp;
   XmSourceData data = source->data;
   XmTextWidget tw = (XmTextWidget)data->widgets[0];

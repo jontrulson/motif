@@ -2371,7 +2371,7 @@ static void
 Resize(
 	 Widget w )
 {
-    register ShellWidget sw = (ShellWidget)w;    
+    ShellWidget sw = (ShellWidget)w;    
     Widget childwid;
     int i;
     int y;

@@ -87,7 +87,7 @@ static void DestroyGC(
 static void DrawRubberBand(
     ExmPannerWidget pw);
 static void CheckKnob(
-    register ExmPannerWidget pw,
+    ExmPannerWidget pw,
     Boolean knob);
 static void ScaleKnob (
     ExmPannerWidget pw,
@@ -129,7 +129,7 @@ static Boolean GetEventXY (
     int *x,
     int *y);
 static int ParsePageString (
-    register char *s,
+    char *s,
     int pagesize,
     int canvassize,
     Boolean *relative);
@@ -706,7 +706,7 @@ DrawRubberBand(
  *********************************************************************/
 static void 
 CheckKnob(
-    register ExmPannerWidget pw,
+    ExmPannerWidget pw,
     Boolean knob)
 {
  Position maxx = (((Position) pw->core.width) - 
@@ -1078,7 +1078,7 @@ GetEventXY (
  ************************************************************************/
 static int 
 ParsePageString (
-    register char *s,
+    char *s,
     int pagesize,
     int canvassize,
     Boolean *relative)

@@ -87,7 +87,7 @@ Widget widget;
 Boolean * is_geotattled ;
 #endif
 {
-    register GeoTatCache * cache_ptr;
+    GeoTatCache * cache_ptr;
     
     for (cache_ptr = geotat_cache; cache_ptr; cache_ptr = cache_ptr->next) {
 	if ((cache_ptr->widget == widget) &&
@@ -117,7 +117,7 @@ Widget widget;
 Boolean geo_tat ;
 #endif
 {
-    register GeoTatCache * cache_ptr;
+    GeoTatCache * cache_ptr;
 
     for (cache_ptr = geotat_cache; cache_ptr; cache_ptr = cache_ptr->next) {
 	if ((cache_ptr->widget == widget) &&
@@ -146,7 +146,7 @@ Widget widget;
 Boolean geo_tat ;
 #endif
 {
-    register GeoTatCache * cache_ptr;
+    GeoTatCache * cache_ptr;
 
     /* create a new entry in the geo cache */
 

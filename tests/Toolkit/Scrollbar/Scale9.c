@@ -52,7 +52,7 @@ unsigned int argc;
 char **argv;
 {
    Arg args[MAX_ARGS];
-   register int	n;
+   int	n;
    Widget label1, label2, label3;
    Widget b;
 

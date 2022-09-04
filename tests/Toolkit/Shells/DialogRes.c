@@ -353,7 +353,7 @@ char   *label;
 Widget  parent;
 {
 	Widget        widget;
-	register int  n;
+	int  n;
 	Arg           args[3];
 	XmString      tcs;
 

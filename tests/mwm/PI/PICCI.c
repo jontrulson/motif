@@ -985,7 +985,7 @@ InternStuff (Display *dsp)
 static XtPointer
 PackString(XtPointer data, String str)
 {
-    register int i, len = strlen(str);
+    int i, len = strlen(str);
 
     data = PackCARD16(data, len);
     for (i = 0; i < len; i++, str++) 

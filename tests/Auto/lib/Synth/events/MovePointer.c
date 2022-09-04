@@ -67,8 +67,8 @@ static char rcsid[] = "$XConsortium: MovePointer.c /main/7 1995/07/14 11:30:21 d
 void xisMovePointer(new_x,new_y)
 int new_x,new_y;
 {
-    register unsigned long relevant_event;
-    register XisObjectRecord *object;
+    unsigned long relevant_event;
+    XisObjectRecord *object;
     static char routine_name[] = "xisMovePointer";
     int root_x,root_y,x=(-100),y=(-100);
     int a,b;

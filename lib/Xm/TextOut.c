@@ -1660,9 +1660,9 @@ CountLines(XmTextWidget tw,
 	   XmTextPosition start,
 	   XmTextPosition end)
 {
-  register XmTextLineTable line_table;
-  register unsigned int t_index;
-  register unsigned int max_index = 0;
+  XmTextLineTable line_table;
+  unsigned int t_index;
+  unsigned int max_index = 0;
   int numlines = 0;
   
   line_table = tw->text.line_table;
@@ -4314,7 +4314,7 @@ static Boolean
 CKCols(ArgList args,
        Cardinal num_args)
 {
-  register ArgList arg;
+  ArgList arg;
   for (arg = args; num_args != 0; num_args--, arg++) {
     if (strcmp(arg->name, XmNcolumns) == 0) return(True);
   }
@@ -4326,7 +4326,7 @@ static Boolean
 CKRows(ArgList args,
        Cardinal num_args)
 {
-  register ArgList arg;
+  ArgList arg;
   for (arg = args; num_args != 0; num_args--, arg++) {
     if (strcmp(arg->name, XmNrows) == 0) return(True);
   }

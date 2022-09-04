@@ -107,7 +107,7 @@ static void BorderUnhighlight(
 static void DrawShadow( 
                         XmCascadeButtonGadget cb) ;
 static void DrawCascade( 
-                        register XmCascadeButtonGadget cb) ;
+                        XmCascadeButtonGadget cb) ;
 static void position_cascade( 
                         XmCascadeButtonGadget cascadebtn) ;
 static void Redisplay( 
@@ -857,7 +857,7 @@ DrawShadow(
 
 static void 
 DrawCascade(
-        register XmCascadeButtonGadget cb )
+        XmCascadeButtonGadget cb )
 {
    if ((CBG_HasCascade(cb)) && (CBG_Cascade_width(cb) != 0))
    {
@@ -1907,7 +1907,7 @@ MenuBarEnter(
         Widget wid,
         XEvent *event )
 {
-   register XmCascadeButtonWidget cb = (XmCascadeButtonWidget) wid ;
+   XmCascadeButtonWidget cb = (XmCascadeButtonWidget) wid ;
    XmRowColumnWidget rc = (XmRowColumnWidget)XtParent(cb);
 
    if ((RC_IsArmed (rc)) && (! CBG_IsArmed(cb))
@@ -1932,7 +1932,7 @@ static void
 MenuBarLeave(
         Widget wid )
 {
-   register XmCascadeButtonWidget cb = (XmCascadeButtonWidget) wid ;
+   XmCascadeButtonWidget cb = (XmCascadeButtonWidget) wid ;
    XmMenuShellWidget submenuShell;
 
    if (RC_IsArmed (XtParent (cb)))
@@ -2953,7 +2953,7 @@ XmVaCreateCascadeButtonGadget(
         char *name,
         ...)
 {
-    register Widget w;
+    Widget w;
     va_list var;
     int count;
     

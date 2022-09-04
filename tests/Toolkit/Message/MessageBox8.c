@@ -67,7 +67,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg      args[10];
-    register int n;
+    int n;
     static   int minimize = False;
 
     if (minimize) {
@@ -136,7 +136,7 @@ unsigned int argc;
 char **argv;
 {
     Arg             args[10];
-    register int    n;      
+    int    n;      
     Widget 	    Frame;
 
     /*  initialize toolkit  */

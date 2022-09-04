@@ -161,7 +161,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
 
     n = 0;
     XtSetArg (args[n], XmNsymbolPixmap, hourPix); 	n++;
@@ -178,7 +178,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg            args[10];
-    register int   n;
+    int   n;
     static Pixmap  pix=(Pixmap)0;
 
     if (!pix) 
@@ -203,7 +203,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
 
     n=0;
     XtSetArg (args[n], XmNsymbolPixmap, tinaPix); 	n++;
@@ -217,7 +217,7 @@ unsigned int argc;
 char **argv;
 {
     Arg             args[10];           /*  arg list            */
-    register int    n;                  /*  arg count           */
+    int    n;                  /*  arg count           */
 
 
     /*  initialize toolkit  */
@@ -283,7 +283,7 @@ unsigned short *bitmap_bits;
 int     bitmap_height, bitmap_width;
 Pixel   foreground_pixel, background_pixel;
 {
-    register Display *display = DisplayOfScreen (screen);
+    Display *display = DisplayOfScreen (screen);
     XImage image;
     Pixmap pixmap;
     GC gc;

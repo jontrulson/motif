@@ -36,7 +36,7 @@ void  main (argc, argv)
     int     argc;
     char  **argv;
 {
-    register int       n;
+    int       n;
     Arg                args[MAX_ARGS];
     XmString           tcs, tcs2;
 
@@ -461,7 +461,7 @@ static Widget  CreateToggleButton(Widget parent, char *label)
 
 {
     Widget        widget;
-    register int  n;
+    int  n;
     Arg           args[4];
     XmString      tcs;
 

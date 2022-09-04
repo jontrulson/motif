@@ -357,7 +357,7 @@ char		*argv[];
   Widget bulletin;
   XrmValue from;
   XrmValue to_return;
-  register int	i;
+  int	i;
 
   /*
    * Initialize toolkit

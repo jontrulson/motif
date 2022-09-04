@@ -224,7 +224,7 @@ extern char* uil_mmove(char*, char*, int);
 
 #define _fill( __string, __char, __len )	\
     {						\
-      register int i = __len; 			\
+      int i = __len; 			\
       while (--i >= 0)				\
 	(__string)[i] = __char;			\
     }

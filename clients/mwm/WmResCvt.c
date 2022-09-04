@@ -1506,10 +1506,10 @@ unsigned char *NextToken (unsigned char *pchIn, int *pLen,
 	unsigned char **ppchNext)
 {
     unsigned char *pchR = pchIn;
-    register int   i;
+    int   i;
 
 #ifndef NO_MULTIBYTE
-    register int   chlen;
+    int   chlen;
 
     for (i = 0;
 	 ((chlen = mblen((char *)pchIn, MB_CUR_MAX)) > 0) && (pchIn[0] != '\0');

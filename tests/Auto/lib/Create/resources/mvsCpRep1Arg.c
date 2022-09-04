@@ -60,8 +60,8 @@ int 			*orig_argcnt;
 char 			new_arg_name[];
 MvsArgVal 		new_arg_value;
 {
-    register int j;
-    register int index;
+    int j;
+    int index;
     char msg_string[125];
 
     for (j=0; (j<*orig_argcnt) && strcmp(new_arg_name,orig_args[j].name); j++)

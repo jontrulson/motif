@@ -51,7 +51,7 @@ void  main(argc, argv)
 int     argc;
 char  **argv;
 {
-  register int  n;
+  int  n;
   Arg           args[MAX_ARGS];
   
   
@@ -66,8 +66,8 @@ char  **argv;
 static void RunTest(Shell1)
 Widget Shell1;
 {
-  register int  i;
-  register int  n;
+  int  i;
+  int  n;
   Arg           args[MAX_ARGS];
   char          label[80];
   
@@ -110,8 +110,8 @@ Widget Shell1;
 static void CreateRowColumn(Shell1)
 Widget Shell1;
 {
-  register int  i;
-  register int  n;
+  int  i;
+  int  n;
   Arg           args[MAX_ARGS];
   char          label[80];
 

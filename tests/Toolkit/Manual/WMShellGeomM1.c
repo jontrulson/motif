@@ -579,7 +579,7 @@ CreatePushButton(Widget parent, char *label)
 
 {
     Widget        widget;
-    register int  n;
+    int  n;
     Arg           args[3];
     XmString      tcs;
 #ifdef MOTIF1_1

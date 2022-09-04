@@ -85,7 +85,7 @@ XtPointer     client_data;                 /*  data from application   */
 XtPointer     call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
     Widget   child=NULL;
 
     child = XmMessageBoxGetChild (w, XmDIALOG_HELP_BUTTON);
@@ -104,7 +104,7 @@ XtPointer     client_data;                 /*  data from application   */
 XtPointer     call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
     Widget   child=NULL;
 
     child = XmMessageBoxGetChild (w, XmDIALOG_SYMBOL_LABEL);
@@ -123,7 +123,7 @@ XtPointer     client_data;                 /*  data from application   */
 XtPointer     call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
     Widget   child=NULL;
 
     child = XmMessageBoxGetChild (w, XmDIALOG_MESSAGE_LABEL);
@@ -141,7 +141,7 @@ unsigned int argc;
 char **argv;
 {
     Arg             args[MAX_ARGS];
-    register int    n;            
+    int    n;            
     Widget	    Frame;
 
 
@@ -207,7 +207,7 @@ unsigned short *bitmap_bits;
 int     bitmap_height, bitmap_width;
 Pixel   foreground_pixel, background_pixel;
 {
-    register Display *display = DisplayOfScreen (screen);
+    Display *display = DisplayOfScreen (screen);
     XImage image;
     Pixmap pixmap;
     GC gc;

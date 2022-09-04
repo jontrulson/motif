@@ -45,9 +45,9 @@ extern XmTextLineTable _XmTextGetLineTable(Widget widget,
 extern void _XmTextRealignLineTable(XmTextWidget widget,
 				    XmTextLineTable *temp_table,
 				    int *temp_table_size,
-				    register unsigned int cur_index,
-				    register XmTextPosition cur_start,
-				    register XmTextPosition cur_end);
+				    unsigned int cur_index,
+				    XmTextPosition cur_start,
+				    XmTextPosition cur_end);
 extern unsigned int _XmTextGetTableIndex(XmTextWidget widget,
 					 XmTextPosition pos);
 extern void _XmTextUpdateLineTable(Widget widget,

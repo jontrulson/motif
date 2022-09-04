@@ -310,7 +310,7 @@ static void ClearCB(Widget w, XtPointer client_data,
 			      XtPointer call_data)
 
 {
-    register int i;
+    int i;
 
     for (i = 0 ; i < count1 ; i++)
 	CS_ItemList1[i] = NULL;

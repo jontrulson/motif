@@ -128,7 +128,7 @@ static XtCallbackRec toDCallback[] =
 static Widget CreateLabel(char *label, Widget parent)
 {
   Widget widget;
-  register int n;
+  int n;
   Arg args[MAX_ARGS];
   XmString tcs;
 
@@ -145,7 +145,7 @@ static Widget CreateLabel(char *label, Widget parent)
 static Widget CreatePushButton(char *label, KeySym mnemonic, Widget parent)
 {
   Widget widget;
-  register int n;
+  int n;
   Arg args[MAX_ARGS];
   XmString tcs;
 
@@ -163,7 +163,7 @@ static Widget CreatePushButton(char *label, KeySym mnemonic, Widget parent)
 static Widget CreateToggle(char *label, KeySym mnemonic, Widget parent)
 {
   Widget widget;
-  register int n;
+  int n;
   Arg args[MAX_ARGS];
   XmString tcs;
 
@@ -197,7 +197,7 @@ static Widget CreateCascade(char *label, KeySym mnemonic, Widget submenu,
 			    Widget parent)
 {
   Widget widget;
-  register int  n;
+  int  n;
   Arg args[MAX_ARGS];
   XmString tcs;
 
@@ -218,7 +218,7 @@ static Widget CreateCascade(char *label, KeySym mnemonic, Widget submenu,
 
 void CascadeCB(Widget w, XtPointer closure, XtPointer call_data)
 {
-  register int n;
+  int n;
   Arg args[MAX_ARGS];
 
   if (PullDown6 == NULL)
@@ -239,7 +239,7 @@ void CascadeCB(Widget w, XtPointer closure, XtPointer call_data)
 
 void ActCB(Widget w, XtPointer closure, XtPointer call_data)
 {
-  register int n;
+  int n;
   Arg args[MAX_ARGS];
 
   if (PullDown7 == NULL)
@@ -262,7 +262,7 @@ int main(argc, argv)
 int argc;
 char **argv;
 {
-  register int  n;
+  int  n;
   Arg args[MAX_ARGS];
   static CBDataStruct PD1Data, PD2Data, PD3Data, PD1AData;
 

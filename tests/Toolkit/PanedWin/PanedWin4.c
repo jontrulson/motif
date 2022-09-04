@@ -43,7 +43,7 @@ char  **argv;
 {
     int                delay = 0;
     Boolean            mywait = False;
-    register int       n;
+    int       n;
     Arg                args[MAX_ARGS];
     XmString           tcs = NULL;
     XWindowAttributes  info;

@@ -48,7 +48,7 @@ void  main(argc, argv)
      int     argc;
      char    **argv;
 {
-  register int  n;
+  int  n;
   Arg           args[MAX_ARGS];
   
   CommonTestInit(argc, argv);
@@ -63,8 +63,8 @@ void  main(argc, argv)
 static void RunTest(Shell1)
 Widget Shell1;
 {
-  register int  i;
-  register int  n;
+  int  i;
+  int  n;
   Arg           args[MAX_ARGS];
   
     
@@ -169,7 +169,7 @@ Widget Shell1;
 static void CreateBulletinBoard(Shell1)
 Widget Shell1;
 {
-  register int  n;
+  int  n;
   Arg           args[MAX_ARGS];
   
   n = 0;

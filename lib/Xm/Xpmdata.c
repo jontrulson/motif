@@ -57,8 +57,8 @@ ParseComment(mdata)
     xpmData *mdata;
 {
     if (mdata->type == XPMBUFFER) {
-	register char c;
-	register unsigned int n = 0;
+	char c;
+	unsigned int n = 0;
 	unsigned int notend;
 	char *s, *s2;
 
@@ -115,8 +115,8 @@ ParseComment(mdata)
 	return 0;
     } else {
 	FILE *file = mdata->stream.file;
-	register int c;
-	register unsigned int n = 0, a;
+	int c;
+	unsigned int n = 0, a;
 	unsigned int notend;
 	char *s, *s2;
 
@@ -186,7 +186,7 @@ xpmNextString(mdata)
     if (!mdata->type)
 	mdata->cptr = (mdata->stream.data)[++mdata->line];
     else if (mdata->type == XPMBUFFER) {
-	register char c;
+	char c;
 
 	/* get to the end of the current string */
 	if (mdata->Eos)
@@ -206,7 +206,7 @@ xpmNextString(mdata)
 	    mdata->cptr--;
 	}
     } else {
-	register int c;
+	int c;
 	FILE *file = mdata->stream.file;
 
 	/* get to the end of the current string */
@@ -257,7 +257,7 @@ xpmNextWord(mdata, buf, buflen)
     char *buf;
     unsigned int buflen;
 {
-    register unsigned int n = 0;
+    unsigned int n = 0;
     int c;
 
     if (!mdata->type || mdata->type == XPMBUFFER) {

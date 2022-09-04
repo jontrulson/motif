@@ -40,7 +40,7 @@ Widget ToggleBtn2, popup, MainButton, push, testingArea;
 static Widget CreateLabel(char *label, Widget parent)
 {
   Widget widget;
-  register int n;
+  int n;
   Arg args[MAX_ARGS];
   XmString tcs;
 
@@ -56,7 +56,7 @@ static Widget CreateLabel(char *label, Widget parent)
 static Widget CreatePushButton(char *label, Widget parent)
 {
   Widget widget;
-  register int n;
+  int n;
   Arg args[MAX_ARGS];
   XmString tcs;
 
@@ -72,7 +72,7 @@ static Widget CreatePushButton(char *label, Widget parent)
 static Widget CreateToggle(char *label, Widget parent)
 {
   Widget widget;
-  register int n;
+  int n;
   Arg args[MAX_ARGS];
   XmString tcs;
 
@@ -95,7 +95,7 @@ static Widget CreateSeparator(Widget parent, char *name)
 
 int main(int argc, char **argv)
 {
-    register int  n;
+    int  n;
     Arg args[MAX_ARGS];
     XmString tcs;
     void PostPopup();

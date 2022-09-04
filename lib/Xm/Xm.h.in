@@ -1510,25 +1510,25 @@ extern int XmConvertStringToUnits(
 extern int XmConvertUnits( 
                         Widget widget,
                         int dimension,
-                        register int from_type,
-                        register int from_val,
-                        register int to_type) ;
+                        int from_type,
+                        int from_val,
+                        int to_type) ;
 extern int XmCvtToHorizontalPixels( 
                         Screen *screen,
-                        register int from_val,
-                        register int from_type) ;
+                        int from_val,
+                        int from_type) ;
 extern int XmCvtToVerticalPixels( 
                         Screen *screen,
-                        register int from_val,
-                        register int from_type) ;
+                        int from_val,
+                        int from_type) ;
 extern int XmCvtFromHorizontalPixels( 
                         Screen *screen,
-                        register int from_val,
-                        register int to_type) ;
+                        int from_val,
+                        int to_type) ;
 extern int XmCvtFromVerticalPixels( 
                         Screen *screen,
-                        register int from_val,
-                        register int to_type) ;
+                        int from_val,
+                        int to_type) ;
 extern void XmSetFontUnits( 
                         Display *display,
                         int h_value,

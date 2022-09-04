@@ -54,7 +54,7 @@ static char rcsid[] = "$XConsortium: UpdObjAttr.c /main/7 1995/07/14 11:43:30 dr
 
 void xisUpdateObjectAttributes()
 {
-    register XisObjectRecord *object;
+    XisObjectRecord *object;
     XisObjectRecord *object_stack[100];
     short stack_top = 0;
     XWindowAttributes wattr;

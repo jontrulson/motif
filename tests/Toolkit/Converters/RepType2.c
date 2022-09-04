@@ -494,7 +494,7 @@ static void AddRepType(String rep_type, char *names[],
 
 static void CheckStaticTypes(void)
 {
-  register int i=0, value_counter=0, k=0;
+  int i=0, value_counter=0, k=0;
   unsigned short temp_rep_id, error_counter;
   XmRepTypeEntry temp_rep_type;
  

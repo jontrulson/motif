@@ -62,8 +62,8 @@ XisObjectRecord *curr_object;
 int curr_x, curr_y;
 int target_x, target_y;
 {
-    register XisObjectRecord *tmp_object=NULL;
-    register XisObjectRecord *new_object=NULL;
+    XisObjectRecord *tmp_object=NULL;
+    XisObjectRecord *new_object=NULL;
     XisObjectRecord *object=NULL;
     int x,y,old_x,old_y;
     int distance_int;

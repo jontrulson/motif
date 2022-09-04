@@ -60,7 +60,7 @@ void  main(argc, argv)
     int     argc;
     char  **argv;
 {
-    register int  n, i;
+    int  n, i;
     Arg           args[MAX_ARGS];
     Widget        Separator1, Frame1;
     Widget        Form2;
@@ -650,7 +650,7 @@ void PopulateList (w, client_data, call_data)
 {
     char buf[32];
     int value;
-    register int i;
+    int i;
     Arg args[2];
     
     /* change Command's history list to contain # of items set by Scale */

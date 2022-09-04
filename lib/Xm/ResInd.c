@@ -338,16 +338,16 @@ int
 _XmConvertUnits(
         Screen *screen,
         int dimension,
-        register int from_type,
-        register int from_val,
-        register int to_type )
+        int from_type,
+        int from_val,
+        int to_type )
 {
   /*
    * from_val_in_mm is actually from_val_in_1000thmillimeters for accuracy
    *     likewise for mm_per_pixel
    */
-  register int from_val_in_mm = 0;
-  register int mm_per_pixel = 0 ; /* time 100000 */
+  int from_val_in_mm = 0;
+  int mm_per_pixel = 0 ; /* time 100000 */
   int font_unit;
   
   
@@ -472,9 +472,9 @@ int
 XmConvertUnits(
         Widget widget,
         int dimension,
-        register int from_type,
-        register int from_val,
-        register int to_type )
+        int from_type,
+        int from_val,
+        int to_type )
 {
   int value;
   Screen *screen;
@@ -499,8 +499,8 @@ XmConvertUnits(
 int 
 XmCvtToHorizontalPixels(
         Screen *screen,
-        register int from_val,
-        register int from_type )
+        int from_val,
+        int from_type )
 {
   int value;
   _XmDisplayToAppContext(DisplayOfScreen(screen));
@@ -527,7 +527,7 @@ ToPixels(
     unsigned char orientation )
 {
   Screen * screen = XtScreen (widget);
-  register unsigned char unit_type;
+  unsigned char unit_type;
   
   /*  Get the unit type of the widget  */
   unit_type = _XmGetUnitType(widget) ;
@@ -577,8 +577,8 @@ XmeToHorizontalPixels(
 int 
 XmCvtToVerticalPixels(
         Screen *screen,
-        register int from_val,
-        register int from_type )
+        int from_val,
+        int from_type )
 {
   int value;
   _XmDisplayToAppContext(DisplayOfScreen(screen));
@@ -626,8 +626,8 @@ XmeToVerticalPixels(
 int 
 XmCvtFromHorizontalPixels(
         Screen *screen,
-        register int from_val,
-        register int to_type )
+        int from_val,
+        int to_type )
 {
   int value;
   _XmDisplayToAppContext(DisplayOfScreen(screen));
@@ -703,8 +703,8 @@ XmeFromHorizontalPixels(
 int 
 XmCvtFromVerticalPixels(
         Screen *screen,
-        register int from_val,
-        register int to_type )
+        int from_val,
+        int to_type )
 {
   int value;
   _XmDisplayToAppContext(DisplayOfScreen(screen));

@@ -39,7 +39,7 @@ unsigned int argc;
 char **argv;
 {
     Arg             args[10];           /*  arg list            */
-    register int    n;                  /*  arg count           */
+    int    n;                  /*  arg count           */
     XmString	    tcs, tcs2;
     XFontStruct     *newfont;
     XmFontList      newfontlist;

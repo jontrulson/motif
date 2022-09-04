@@ -257,7 +257,7 @@ static void ResetCB(Widget w, XtPointer client_data,
 int 
 main (int argc, char **argv)
 {
-  register int       n;
+  int       n;
   Arg                args[MAX_ARGS], dropSiteArgs[3];
   Widget       	     grid;
   char               name[80];

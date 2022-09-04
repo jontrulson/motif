@@ -625,7 +625,7 @@ CreatePushButton(Widget parent, char *label)
 {
 
     Widget          widget;
-    register int    n;
+    int    n;
     Arg             args[MAX_ARGS];
     XmString        tcs;
 

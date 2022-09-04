@@ -75,7 +75,7 @@ static void SashAction(
                         String *params,
                         Cardinal *num_params) ;
 static void Realize( 
-                        register Widget w,
+                        Widget w,
                         XtValueMask *p_valueMask,
                         XSetWindowAttributes *attributes) ;
 static void Redisplay( 
@@ -300,7 +300,7 @@ SashFocusIn(
         char **params,
         Cardinal *num_params )
 {
-    register XmSashWidget sash = (XmSashWidget) w;
+    XmSashWidget sash = (XmSashWidget) w;
 
     if (event->xany.type != FocusIn || !event->xfocus.send_event)
           return;
@@ -327,7 +327,7 @@ SashFocusOut(
         char **params,
         Cardinal *num_params )
 {
-    register XmSashWidget sash = (XmSashWidget) w;
+    XmSashWidget sash = (XmSashWidget) w;
 
     if (event->xany.type != FocusOut || !event->xfocus.send_event)
           return;
@@ -352,7 +352,7 @@ SashAction(
         String *params,
         Cardinal *num_params )
 {
-    register XmSashWidget sash = (XmSashWidget) widget;
+    XmSashWidget sash = (XmSashWidget) widget;
     SashCallDataRec call_data;
 
     call_data.event = event;
@@ -364,7 +364,7 @@ SashAction(
 
 static void 
 Realize(
-        register Widget w,
+        Widget w,
         XtValueMask *p_valueMask,
         XSetWindowAttributes *attributes )
 {
@@ -446,7 +446,7 @@ Redisplay(
         XEvent *event,
         Region region )
 {
-   register XmSashWidget sash = (XmSashWidget) w;
+   XmSashWidget sash = (XmSashWidget) w;
 
      XmeDrawShadows (XtDisplay (w), XtWindow (w), 
                       sash->primitive.top_shadow_GC,

@@ -102,7 +102,7 @@ static XmDragContext FindDC(
 #endif /* NeedWidePrototypes */
 static int isMine( 
                         Display *dpy,
-                        register XEvent *event,
+                        XEvent *event,
                         char *arg) ;
 static void ReceiverShellExternalSourceHandler( 
                         Widget w,
@@ -809,7 +809,7 @@ FindDC(
 static int 
 isMine(
         Display *dpy,
-        register XEvent *event,
+        XEvent *event,
         char *arg )
 {
 	XmDisplayEventQueryStruct 	*q = (XmDisplayEventQueryStruct *) arg;

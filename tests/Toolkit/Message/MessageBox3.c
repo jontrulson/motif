@@ -77,7 +77,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
     Widget   child=NULL;
     Pixmap   pix;
 
@@ -108,7 +108,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
     Widget   child=NULL;
 
     child = XmMessageBoxGetChild (w, XmDIALOG_SYMBOL_LABEL);
@@ -126,7 +126,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
     Widget   child=NULL;
 
     child = XmMessageBoxGetChild (w, XmDIALOG_MESSAGE_LABEL);
@@ -142,7 +142,7 @@ unsigned int argc;
 char **argv;
 {
     Arg             args[10];       
-    register int    n;             
+    int    n;             
     Widget	    Frame;
 
 

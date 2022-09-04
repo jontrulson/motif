@@ -30,7 +30,7 @@
 
 void main(int argc, char **argv)
 {
-    register int  	n;
+    int  	n;
     Arg         	args[MAX_ARGS];
     XmString    	tcs, tcs1, tcs2, tcs3;
     Widget              Form, TextF1, RC1, Toggle1, Label1;

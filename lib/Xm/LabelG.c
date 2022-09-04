@@ -853,7 +853,7 @@ XmMenuSavvyTrait mst)
 static void
 ClassPartInitialize(WidgetClass cl)
 {
-    register XmLabelGadgetClass wc = (XmLabelGadgetClass) cl;
+    XmLabelGadgetClass wc = (XmLabelGadgetClass) cl;
     XmLabelGadgetClass super = (XmLabelGadgetClass)wc->rect_class.superclass;
     XmGadgetClassExt *wcePtr, *scePtr;
 
@@ -3626,7 +3626,7 @@ XmVaCreateLabelGadget(
         char *name,
         ...)
 {
-    register Widget w;
+    Widget w;
     va_list var;
     int count;
     

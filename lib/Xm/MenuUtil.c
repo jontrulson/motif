@@ -129,7 +129,7 @@ _XmGrabPointer(
 	Cursor cursor, 
 	Time time )
 {
-   register int status = 0, retry;
+   int status = 0, retry;
 
    for (retry=0; retry < 5; retry++)
    {
@@ -157,7 +157,7 @@ _XmGrabKeyboard(
 	int keyboard_mode, 
 	Time time )
 {
-   register int status = 0, retry;
+   int status = 0, retry;
 
    for (retry=0; retry < 5; retry++)
    {
@@ -778,7 +778,7 @@ static void
 FindNextMenuBarItem(
         XmRowColumnWidget menubar )
 {
-   register int i, j;
+   int i, j;
    int upper_limit;
    Widget active_child;
 
@@ -818,7 +818,7 @@ static void
 FindPrevMenuBarItem(
         XmRowColumnWidget menubar )
 {
-   register int i, j;
+   int i, j;
    int upper_limit;
    Widget active_child;
 
@@ -893,7 +893,7 @@ FindNextMenuBarCascade(
         XmRowColumnWidget menubar )
 {
    Widget active_child = NULL;
-   register int i, j;
+   int i, j;
    int upper_limit;
    ShellWidget shell;
    XmMenuState mst = _XmGetMenuState((Widget)menubar);
@@ -938,7 +938,7 @@ FindPrevMenuBarCascade(
         XmRowColumnWidget menubar )
 {
     Widget active_child = NULL;
-    register int i, j;
+    int i, j;
     int upper_limit;
     ShellWidget shell;
     XmMenuState mst = _XmGetMenuState((Widget)menubar);
@@ -1046,7 +1046,7 @@ _XmMenuGrabKeyboardAndPointer(
       Time time )
 {
 
-   register int status =
+   int status =
            (_XmGrabKeyboard(widget,
                             True,
                             GrabModeSync,

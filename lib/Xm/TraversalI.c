@@ -329,9 +329,9 @@ _XmGetEffectiveView(Widget wid,
 }
 
 Boolean
-_XmIntersectionOf(register XRectangle *srcRectA,
-		  register XRectangle *srcRectB,
-		  register XRectangle *destRect)
+_XmIntersectionOf(XRectangle *srcRectA,
+		  XRectangle *srcRectB,
+		  XRectangle *destRect)
 {   
   /* Returns TRUE if there is a non-zero area at the intersection of the
    *   two source rectangles, FALSE otherwise.  The destRect receives
@@ -505,7 +505,7 @@ TraverseControl(XmTraversalNode cur_node,
 static XmTraversalNode
 NextControl(XmTraversalNode ctl_node)
 {
-  register XmTraversalNode ptr = ctl_node;
+  XmTraversalNode ptr = ctl_node;
   XmTraversalNode next = NULL;
   XmTraversalNode min = ctl_node;
 
@@ -529,7 +529,7 @@ NextControl(XmTraversalNode ctl_node)
 static XmTraversalNode
 PrevControl(XmTraversalNode ctl_node)
 {
-  register XmTraversalNode ptr = ctl_node;
+  XmTraversalNode ptr = ctl_node;
   XmTraversalNode prev = NULL;
   XmTraversalNode max = ctl_node;
 
@@ -1774,8 +1774,8 @@ static int
 CompareNodesHorizLT(XmConst void *A,
 		    XmConst void *B)
 {
-  register XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
-  register XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
+  XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
+  XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
 
   if (nodeA->any.rect.x != nodeB->any.rect.x)
     return (nodeA->any.rect.x < nodeB->any.rect.x) ? -1 : 1;
@@ -1797,8 +1797,8 @@ static int
 CompareNodesHorizRT(XmConst void *A,
 		    XmConst void *B)
 {
-  register XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
-  register XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
+  XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
+  XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
 
   if ((nodeA->any.rect.x + nodeA->any.rect.width) !=
       (nodeB->any.rect.x + nodeB->any.rect.width))
@@ -1822,8 +1822,8 @@ static int
 CompareNodesHorizLB(XmConst void *A,
 		    XmConst void *B)
 {
-  register XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
-  register XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
+  XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
+  XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
 
   if (nodeA->any.rect.x != nodeB->any.rect.x)
     return (nodeA->any.rect.x < nodeB->any.rect.x) ? -1 : 1;
@@ -1847,8 +1847,8 @@ static int
 CompareNodesHorizRB(XmConst void *A,
 		    XmConst void *B)
 {
-  register XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
-  register XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
+  XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
+  XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
 
   if ((nodeA->any.rect.x + nodeA->any.rect.width) !=
       (nodeB->any.rect.x + nodeB->any.rect.width))
@@ -1894,8 +1894,8 @@ static int
 CompareNodesVertLT(XmConst void *A,
 		   XmConst void *B)
 {
-  register XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
-  register XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
+  XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
+  XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
 
   if (nodeA->any.rect.y != nodeB->any.rect.y)
     return (nodeA->any.rect.y < nodeB->any.rect.y) ? -1 : 1;
@@ -1917,8 +1917,8 @@ static int
 CompareNodesVertRT(XmConst void *A,
 		   XmConst void *B)
 {
-  register XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
-  register XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
+  XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
+  XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
 
   if (nodeA->any.rect.y != nodeB->any.rect.y)
     return (nodeA->any.rect.y < nodeB->any.rect.y) ? -1 : 1;
@@ -1942,8 +1942,8 @@ static int
 CompareNodesVertLB(XmConst void *A,
 		   XmConst void *B)
 {
-  register XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
-  register XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
+  XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
+  XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
 
   if ((nodeA->any.rect.y + nodeA->any.rect.height) != 
       (nodeB->any.rect.y + nodeB->any.rect.height))
@@ -1967,8 +1967,8 @@ static int
 CompareNodesVertRB(XmConst void *A,
 		   XmConst void *B)
 {
-  register XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
-  register XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
+  XmConst XmTraversalNode nodeA = *((XmTraversalNode *) A);
+  XmConst XmTraversalNode nodeB = *((XmTraversalNode *) B);
 
   if ((nodeA->any.rect.y + nodeA->any.rect.height) != 
       (nodeB->any.rect.y + nodeB->any.rect.height))

@@ -45,7 +45,7 @@ char **argv;
 {
   Widget BBoard, Label1, Label2, Separator1, Separator2, Separator3;
   Widget Separator4, Label3, Label4;
-  register int n;
+  int n;
   Arg args[MAX_ARGS];
   Dimension separator_margin;
   char trace_string[128];

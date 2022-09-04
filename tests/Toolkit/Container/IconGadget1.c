@@ -416,7 +416,7 @@ CreatePushButton(Widget parent, Cardinal j, Cardinal k)
 {
 
     Widget          widget;
-    register int    n;
+    int    n;
     Arg             args[MAX_ARGS];
     XmString        tcs;
     char            name[25];
@@ -447,7 +447,7 @@ CreateOptionMenu(Widget parent, Cardinal j)
 {
 
     Widget          widget;
-    register int    n;
+    int    n;
     Arg             args[MAX_ARGS];
     XmString        tcs;
     char            name[25];

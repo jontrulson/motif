@@ -54,7 +54,7 @@ void  main (argc, argv)
     int     argc;
     char  **argv;
 {
-    register int       n;
+    int       n;
     Arg                args[MAX_ARGS];
     XmString           tcs, tcs2;
 
@@ -677,7 +677,7 @@ static Widget  CreatePushButton(Widget parent, char *label)
 
 {
     Widget        widget;
-    register int  n;
+    int  n;
     Arg           args[3];
     XmString      tcs;
 

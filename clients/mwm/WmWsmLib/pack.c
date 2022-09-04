@@ -315,7 +315,7 @@ _WSMPackReply(Display *dpy, int screen_num,
     WSMAttribute *attr;
     WSMWinInfo *win_info;
     WSMWinEntry *win_entry;
-    register int i;
+    int i;
     long size;
     MessageData data, save;
 
@@ -492,7 +492,7 @@ void
 _WSMUnpackRequest(Display *dpy, int screen_num, MessageData data, 
 		  unsigned long len, WSMRequestType type, WSMRequest *request)
 {
-    register int i;
+    int i;
     request->any.type = type;	/* Save the type. */
     request->any.allocated = False;
 
@@ -507,8 +507,8 @@ _WSMUnpackRequest(Display *dpy, int screen_num, MessageData data,
 	break;
     case WSM_EXTENSIONS:
         {
-	    register int num;
-	    register String *ptr;
+	    int num;
+	    String *ptr;
 
 	    num = request->extensions.num_extensions = UnpackListNum(&data);
 	    ptr = (String *) XtMalloc(sizeof(String) * num);
@@ -615,7 +615,7 @@ void
 _WSMUnpackReply(Display *dpy, int screen_num, MessageData data, 
 		unsigned long len, WSMRequestType type, WSMReply *reply)
 {
-    register int i;
+    int i;
     reply->any.type = type;		/* Save the type. */
     reply->any.allocated = False;
 
@@ -628,8 +628,8 @@ _WSMUnpackReply(Display *dpy, int screen_num, MessageData data,
 	break;
     case WSM_EXTENSIONS:
         {
-	    register int num;
-	    register String *ptr;
+	    int num;
+	    String *ptr;
 
 	    num = reply->extensions.num_extensions = UnpackListNum(&data);
 	    ptr = (String *) XtMalloc(sizeof(String) * num);
@@ -641,7 +641,7 @@ _WSMUnpackReply(Display *dpy, int screen_num, MessageData data,
 	break;
     case WSM_CONFIG_FMT:
         {
-	    register int types;
+	    int types;
 
 	    WSMConfigFormatReply * config_format = &(reply->config_format);
 	    WSMConfigFormatData *fmt;
@@ -806,7 +806,7 @@ static int
 WinDataSizePacked(Display *dpy, int screen_num, 
 		  WSMWinData *win_data, int num, WSMConfigFormatType fmt)
 {
-    register int i, size;
+    int i, size;
     WSMConfigFormatData *fmt_data = _WSMGetConfigFormat(dpy, screen_num, fmt);
 
     size = fmt_data->num_attrs / 8 + 1;	/* Size of header bits. */
@@ -850,7 +850,7 @@ WinDataSizePacked(Display *dpy, int screen_num,
 MessageData
 PackString(MessageData data, String str)
 {
-    register int i, len = strlen(str);
+    int i, len = strlen(str);
 
     data = PackListNum(data, len);
     for (i = 0; i < len; i++, str++) 
@@ -892,7 +892,7 @@ PackConfigFormat(MessageData data, WSMConfigFormatReply *config)
 static MessageData 
 PackSingleAttribute(MessageData data, WSMAttribute *attr_list, int num)
 {
-    register int i;
+    int i;
 
     data = PackListNum(data, num);
     for (i = 0; i < num; i++, attr_list++) {
@@ -969,7 +969,7 @@ PackWinData(Display *dpy, int screen_num, MessageData data,
     WSMConfigFormatData *conf_fmt = _WSMGetConfigFormat(dpy, screen_num, fmt);
     MessageData mask_pos = data;
     WSMAttribute *attr;
-    register int i, size = (conf_fmt->num_attrs / 8) + 1;
+    int i, size = (conf_fmt->num_attrs / 8) + 1;
 
     data = (MessageData) ((char *)data + size);
     bzero((char *) mask_pos, size);	/* Set all bits to zero initially*/
@@ -986,7 +986,7 @@ PackWinData(Display *dpy, int screen_num, MessageData data,
 	    switch(this_data->type) {
 	    case WSM_CHAR_LIST_DATA:
 	        {
-		    register int j;
+		    int j;
 		    char * ptr = this_data->data.char_ptr;
 		    for (j = 0 ; j < this_data->data_len; j++, ptr++)
 			data = PackCARD8(data, (CARD8) *ptr);
@@ -994,7 +994,7 @@ PackWinData(Display *dpy, int screen_num, MessageData data,
 		}
 	    case WSM_SHORT_LIST_DATA:
 	        {
-		    register int j;
+		    int j;
 		    short * ptr = this_data->data.short_ptr;
 		    for (j = 0 ; j < this_data->data_len; j++, ptr++)
 			data = PackCARD16(data, (CARD16) *ptr);
@@ -1002,7 +1002,7 @@ PackWinData(Display *dpy, int screen_num, MessageData data,
 		}
 	    case WSM_LONG_LIST_DATA:
 	        {
-		    register int j;
+		    int j;
 		    long * ptr = this_data->data.long_ptr;
 		    for (j = 0 ; j < this_data->data_len; j++, ptr++) 
 			data = PackCARD32(data, (CARD32) *ptr);
@@ -1124,7 +1124,7 @@ UnpackWinData(MessageData *data_ptr, Display *dpy, int screen_num,
 	      WSMConfigFormatType fmt,
 	      WSMWinData **win_data, int *num)
 {
-    register int i, size;
+    int i, size;
     WSMConfigFormatData *conf_fmt = _WSMGetConfigFormat(dpy, screen_num, fmt);
     unsigned char *bit_mask, *current_mask, check_mask;
     WSMAttribute *attr;
@@ -1194,7 +1194,7 @@ static void
 UnpackSingleWinDataRec(MessageData *data_ptr,
 		     WSMAttribute *attr, WSMWinData *win_data)
 {
-    register int i;
+    int i;
 
     /*
      * Set these no matter what the size.
@@ -1321,7 +1321,7 @@ UnpackWinEntry(MessageData *data, Display *dpy,
 String
 UnpackString(MessageData *data_ptr)
 {
-    register int i;
+    int i;
     int len = UnpackListNum(data_ptr);
     char *str, *top = XtMalloc((len + 1) * sizeof(char));
     

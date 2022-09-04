@@ -40,9 +40,9 @@ extern "C" {
 extern int _XmConvertUnits( 
                         Screen *screen,
                         int dimension,
-                        register int from_type,
-                        register int from_val,
-                        register int to_type) ;
+                        int from_type,
+                        int from_val,
+                        int to_type) ;
 extern void _XmUnitTypeDefault( 
                         Widget widget,
                         int offset,

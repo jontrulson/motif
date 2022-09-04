@@ -804,7 +804,7 @@ XmeClipboardSource(Widget w, XtEnum op, Time time)
       type == XA_ATOM) {
     targets = (Atom *) value;
     count = size;
-    /* For each item we register the format, ask to convert it
+    /* For each item we the format, ask to convert it
        and if it is converted we put it on the clipboard */
     for(i = 0; i < count; i++) {
       name = GetSafeAtomName(display, targets[i], &howFree);

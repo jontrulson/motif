@@ -63,8 +63,8 @@ _XmGMCalcSize(XmManagerWidget manager,
             Dimension *replyWidth,
             Dimension *replyHeight )
 {
-    register int i ;
-    register Widget child ;   
+    int i ;
+    Widget child ;   
     int right, bottom ;
 
     *replyWidth = *replyHeight = 0 ;
@@ -221,8 +221,8 @@ _XmGMEnforceMargin(XmManagerWidget manager,
 )
 {
     int i ;
-    register Widget child ;
-    register Boolean do_move ;
+    Widget child ;
+    Boolean do_move ;
     Position newx, newy ;
            
     for(i = 0 ; i < manager->composite.num_children ; i++) {   
@@ -361,7 +361,7 @@ Boolean
 _XmGMOverlap(XmManagerWidget manager,
            Widget w)
 {   
-    register int      i ;
+    int      i ;
     Position  left1 = XtX(w) ;
     Position  top1 = XtY(w) ;
     Dimension right1 = XtX(w) + 2*XtBorderWidth(w) + XtWidth(w) ;

@@ -46,7 +46,7 @@ int xisGetDragDistance(pwidget, pdel_x, pdel_y)
 int 	*pdel_x, *pdel_y;
 Widget	*pwidget;
 {
-    register XisObjectRecord	*current_obj;
+    XisObjectRecord	*current_obj;
 
     if (!xisInform.is_valid)
 	{

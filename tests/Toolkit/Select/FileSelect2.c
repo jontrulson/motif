@@ -55,7 +55,7 @@ char *mystrings_file[] = {
 
 XtArgVal NewDirSearchProc()
 {
-    register int  n;
+    int  n;
     Arg           args[MAX_ARGS];
     XmString      tcs;
     XmString      mymask, myspec, mylist[MYNSTRINGS_DIR];
@@ -83,7 +83,7 @@ XtArgVal NewDirSearchProc()
 
 XtArgVal NewFileSearchProc()
 {
-    register int  n;
+    int  n;
     Arg           args[MAX_ARGS];
     XmString      tcs;
     XmString      mymask, myspec, mylist[MYNSTRINGS_FILE];
@@ -156,7 +156,7 @@ void  main(argc, argv)
     int     argc;
     char  **argv;
 {
-    register int  n;
+    int  n;
     Arg           args[MAX_ARGS];
     XmString      tcs, tcs2;
     Widget	  Frame;

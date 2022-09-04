@@ -41,7 +41,7 @@ void  main (argc, argv)
 int argc;
 char **argv;
 {
-  register int       n;
+  int       n;
   Arg                args[MAX_ARGS];
   Widget             label, drag_icon;
   Pixmap             drag_pixmap;

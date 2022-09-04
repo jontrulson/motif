@@ -77,7 +77,7 @@ Widget AddMenuItem(Widget menu, char *itemName)
 
 int main(int argc, char **argv)
 {
-  register int i,n;
+  int i,n;
   Arg args[MAX_ARGS];
   XmString tcs;
   char buf[32];

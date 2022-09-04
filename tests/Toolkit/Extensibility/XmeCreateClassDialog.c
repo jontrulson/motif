@@ -55,7 +55,7 @@ int argc;
 char **argv;
 {
   Boolean            trace = False;
-  register int       n, cnt = XtNumber(items);
+  int       n, cnt = XtNumber(items);
   Arg                args[MAX_ARGS];
   String             dirname;
   XmStringTable      str_list;

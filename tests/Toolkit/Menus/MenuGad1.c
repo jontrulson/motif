@@ -58,7 +58,7 @@ static Widget CreateMenuBar(Widget parent, char *name)
 static Widget CreateLabelGadget(char *label, Widget parent)
 {
   Widget widget;
-  register int  n;
+  int  n;
   Arg args[MAX_ARGS];
   XmString tcs;
 
@@ -76,7 +76,7 @@ static Widget CreatePushButtonGadget(char *label, char mnemonic,
 				     Widget parent)
 {
   Widget widget;
-  register int  n;
+  int  n;
   Arg args[MAX_ARGS];
   XmString tcs;
 
@@ -94,7 +94,7 @@ static Widget CreatePushButtonGadget(char *label, char mnemonic,
 static Widget CreateToggleGadget(char *label, char mnemonic, Widget parent)
 {
   Widget widget;
-  register int  n;
+  int  n;
   Arg args[MAX_ARGS];
   XmString tcs;
 
@@ -128,7 +128,7 @@ static Widget CreateCascade(char *label, char mnemonic, Widget submenu,
 			    Widget parent)
 {
   Widget widget;
-  register int  n;
+  int  n;
   Arg args[MAX_ARGS];
   XmString tcs;
 
@@ -147,7 +147,7 @@ static Widget CreateCascadeGadget(char *label, char mnemonic,
 				  Widget submenu, Widget parent)
 {
   Widget widget;
-  register int n;
+  int n;
   Arg args[MAX_ARGS];
   XmString tcs;
 
@@ -165,7 +165,7 @@ static Widget CreateCascadeGadget(char *label, char mnemonic,
 
 int main(int argc, char **argv)
 {
-  register int n;
+  int n;
   Arg args[MAX_ARGS];
   XmString tcs;
 

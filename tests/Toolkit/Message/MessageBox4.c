@@ -76,7 +76,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
     static int minimize = False;
 
     if (minimize) {
@@ -108,7 +108,7 @@ XtPointer     client_data;                 /*  data from application   */
 XtPointer     call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
 
     n=0;
     XtSetArg (args[n], XmNdefaultButtonType, XmDIALOG_CANCEL_BUTTON); n++;
@@ -126,7 +126,7 @@ XtPointer   client_data;                 /*  data from application   */
 XtPointer   call_data;                   /*  data from widget class  */
 {
     Arg          args[10];
-    register int n;
+    int n;
 
     n=0;
     XtSetArg (args[n], XmNdefaultButtonType, XmDIALOG_HELP_BUTTON); n++;
@@ -140,7 +140,7 @@ unsigned int argc;
 char **argv;
 {
     Arg             args[10];           
-    register int    n;                 
+    int    n;                 
     Widget	    Frame;
 
 

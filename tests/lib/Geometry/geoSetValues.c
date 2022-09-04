@@ -41,14 +41,14 @@ extern XrmResourceList* _XtCreateIndirectionTable();
 static void SetValues(base, res, num_resources, args, num_args)
   char*			base;		/* Base address to write values to   */
   XrmResourceList*	res;		/* The current resource values.      */
-  register Cardinal	num_resources;	/* number of items in resources      */
+  Cardinal	num_resources;	/* number of items in resources      */
   ArgList 		args;		/* The resource values to set        */
   Cardinal		num_args;	/* number of items in arg list       */
 {
-    register ArgList		arg;
-    register int 	        i;
-    register XrmName		argName;
-    register XrmResourceList*   xrmres;
+    ArgList		arg;
+    int 	        i;
+    XrmName		argName;
+    XrmResourceList*   xrmres;
 
     /* Resource lists are assumed to be in compiled form already via the
        initial XtGetResources, XtGetSubresources calls */
@@ -113,12 +113,12 @@ CallConstraintSetValues (class, current, request, new, args, num_args)
 
 void XtSetSubvalues(base, resources, num_resources, args, num_args)
   XtPointer             base;           /* Base address to write values to   */
-  register XtResourceList resources;    /* The current resource values.      */
-  register Cardinal     num_resources;  /* number of items in resources      */
+  XtResourceList resources;    /* The current resource values.      */
+  Cardinal     num_resources;  /* number of items in resources      */
   ArgList               args;           /* The resource values to set        */
   Cardinal              num_args;       /* number of items in arg list       */
 {
-      register XrmResourceList*   xrmres;
+      XrmResourceList*   xrmres;
       xrmres = _XtCreateIndirectionTable (resources, num_resources);
       SetValues((char*)base,xrmres,num_resources, args, num_args);
       XtFree((char *)xrmres);
@@ -126,11 +126,11 @@ void XtSetSubvalues(base, resources, num_resources, args, num_args)
 
 
 void XtSetValues(w, args, num_args)
-    register Widget   w;
+    Widget   w;
 	     ArgList  args;
 	     Cardinal num_args;
 {
-    register Widget oldw, reqw;
+    Widget oldw, reqw;
     /* need to use strictest alignment rules possible in next two decls. */
     double	    oldwCache[100], reqwCache[100];
     double	    oldcCache[20], reqcCache[20];

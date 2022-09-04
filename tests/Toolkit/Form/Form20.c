@@ -54,7 +54,7 @@ void  main(argc, argv)
      int     argc;
      char    **argv;
 {
-  register int  n, i;
+  int  n, i;
   Arg args[MAX_ARGS];
   
   CommonTestInit(argc, argv);
@@ -196,8 +196,8 @@ void  main(argc, argv)
 static void CreateForms(Shell)
 Widget Shell;
 {
-  register int  n;
-  register int  case_number;
+  int  n;
+  int  case_number;
   char          label[80];
   Arg           args[MAX_ARGS];
   
@@ -868,7 +868,7 @@ Widget Shell;
 
 static void DestroyForms()
 {
-  register int  case_number;
+  int  case_number;
   
   
   for (case_number = 0; case_number < MAXCASE; case_number++) {

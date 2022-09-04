@@ -54,7 +54,7 @@ void  main(argc, argv)
     char  **argv;
 {
     Boolean       trace = False;
-    register int  n;
+    int  n;
     Arg           args[MAX_ARGS];
     XmString      tcs1;
     XmString      tcs2;

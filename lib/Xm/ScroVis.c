@@ -61,10 +61,10 @@ XmScrollVisible(
 **********************/
 {
     XmScrolledWindowWidget sw = (XmScrolledWindowWidget) scrw ;
-    register 
+    
     Position newx, newy,      /* new workwindow position */
              wx, wy  ;        /* current workwindow position */
-    register 
+    
     unsigned short tw, th,         /* widget sizes */
               cw, ch ;        /* clipwindow sizes */
     Position dx, dy ;         /* position inside the workwindow */

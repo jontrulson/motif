@@ -204,7 +204,7 @@ static void LayoutNone(
                         Dimension *m_width,
                         Dimension *m_height) ;
 static void LayoutOptionAndSize( 
-                        register XmRowColumnWidget menu,
+                        XmRowColumnWidget menu,
                         Dimension *width,
                         Dimension *height,
                         Widget instigator,
@@ -273,7 +273,7 @@ CalcHelp(
         Dimension h )
 #endif /* NeedWidePrototypes */
 {
-   register Dimension subtrahend;
+   Dimension subtrahend;
 
    if (IsVertical (m))             /* glue to bottom edge of ... */
    {
@@ -396,7 +396,7 @@ AdjustLast(
 {
    XmRCKidGeometry kg = RC_Boxes (m);
    XtWidgetGeometry *b;
-   register Dimension subtrahend;
+   Dimension subtrahend;
 
    for ( ; kg [start_i].kid != NULL; start_i++)
    {
@@ -1405,7 +1405,7 @@ LayoutNone(
 /* ARGSUSED */
 static void 
 LayoutOptionAndSize (
-        register XmRowColumnWidget menu,
+        XmRowColumnWidget menu,
         Dimension *width,
         Dimension *height,
         Widget instigator,
@@ -1419,7 +1419,7 @@ LayoutOptionAndSize (
    XtWidgetGeometry    *label_box = NULL, *button_box = NULL;
    Dimension c_width; 
    Dimension c_height;
-   register XmRowColumnWidget p = (XmRowColumnWidget) RC_OptionSubMenu(menu);
+   XmRowColumnWidget p = (XmRowColumnWidget) RC_OptionSubMenu(menu);
    XmCascadeButtonGadget cb = 
       (XmCascadeButtonGadget)XmOptionButtonGadget( (Widget) menu);
 
@@ -1585,7 +1585,7 @@ LayoutOptionAndSize (
 
 void 
 _XmRCThinkAboutSize(
-        register XmRowColumnWidget m,
+        XmRowColumnWidget m,
         Dimension *w,
         Dimension *h,
         Widget instigator,
@@ -2149,7 +2149,7 @@ GetMenuKidMargins(
         Dimension *top,
         Dimension *bottom )
 {
-   register int i;
+   int i;
    Widget *q;
 
    *width = *height = *left = *right = *top = *bottom = 0;
@@ -2195,8 +2195,8 @@ void
 _XmRCDoMarginAdjustment(
         XmRowColumnWidget m )
 {
-    register Widget *p;
-    register int i; 
+    Widget *p;
+    int i; 
     Dimension m_w, m_h, m_l, m_r, m_t, m_b;
     Dimension w, h;
 

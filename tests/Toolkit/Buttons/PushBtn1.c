@@ -83,7 +83,7 @@ char  **argv;
 {
   int                delay = 0;
   Boolean            trace = False;
-  register int       n;
+  int       n;
   Arg                args[MAX_ARGS];
   XWindowAttributes  info;
   XEvent             DummyEvent;

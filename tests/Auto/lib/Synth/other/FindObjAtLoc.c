@@ -59,10 +59,10 @@ static char rcsid[] = "$XConsortium: FindObjAtLoc.c /main/7 1995/07/14 11:33:04 
 XisObjectRecord *xisFindObjectAtLocation(x,y)
 int x,y;
 {
-    register int stack_top = 0;
-    register int done = False;
-    register XisObjectRecord *object;
-    register XisObjectRecord *save_object=NULL_Object;
+    int stack_top = 0;
+    int done = False;
+    XisObjectRecord *object;
+    XisObjectRecord *save_object=NULL_Object;
     XisObjectRecord *object_stack[100];
     int border_width;
 

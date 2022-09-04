@@ -85,7 +85,7 @@ AutoParseAndGenerateCommands( void )
   int				i, multi_click,	mask, XButton, group;
   int				Component, location, Location, direction;
   int				widget_class_code = 0;
-  register int                  n;
+  int                  n;
   Arg                           args[MAX_ARGS];
   int                           PerformanceOnOff;
   

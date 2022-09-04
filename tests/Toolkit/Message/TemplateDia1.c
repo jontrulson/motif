@@ -115,7 +115,7 @@ unsigned short *bitmap_bits;
 int     bitmap_height, bitmap_width;
 Pixel   foreground_pixel, background_pixel;
 {
-    register Display *display = DisplayOfScreen (screen);
+    Display *display = DisplayOfScreen (screen);
     XImage image;
     Pixmap pixmap;
     GC gc;
@@ -174,7 +174,7 @@ unsigned int argc;
 char **argv;
 {
     Arg             args[MAX_ARGS];
-    register int    n;            
+    int    n;            
     Widget	    Frame;
     XmMessageBoxWidget mbox;
     XmString	    string;

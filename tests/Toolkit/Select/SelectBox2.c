@@ -257,7 +257,7 @@ unsigned int argc;
 char **argv;
 {
   Arg args[10];       /*  arg list            */
-  register int n;     /*  arg count           */
+  int n;     /*  arg count           */
   XmString tcs, tcs1, namelist[NUM_NAMES], tcs2;
 
 #ifndef MOTIF1_1

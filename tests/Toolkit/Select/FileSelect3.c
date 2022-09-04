@@ -92,7 +92,7 @@ unsigned int argc;
 char **argv;
 {
   Arg args[10]; 
-  register int n;
+  int n;
   XmString tcs;
   Widget  Frame;
 

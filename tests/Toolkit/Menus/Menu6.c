@@ -109,7 +109,7 @@ static void activate_msg(Widget w, XtPointer client_dat,
 
 int main(int argc, char **argv)
 {
-  register int  n;
+  int  n;
   Arg args[MAX_ARGS];
   Arg nargs[MAX_ARGS];
   int i;

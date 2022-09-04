@@ -63,11 +63,11 @@ xpmstrdup(s1)
 
 unsigned int
 xpmatoui(p, l, ui_return)
-    register char *p;
+    char *p;
     unsigned int l;
     unsigned int *ui_return;
 {
-    register unsigned int n, i;
+    unsigned int n, i;
 
     n = 0;
     for (i = 0; i < l; i++)

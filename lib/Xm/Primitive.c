@@ -85,7 +85,7 @@ static void Initialize(
 			 ArgList args,
 			 Cardinal *num_args) ;
 static void Realize( 
-			 register Widget w,
+			 Widget w,
 			 XtValueMask *p_valueMask,
 			 XSetWindowAttributes *attributes) ;
 static void Destroy( 
@@ -845,7 +845,7 @@ Initialize(
  ************************************************************************/
 static void 
 Realize(
-        register Widget w,
+        Widget w,
         XtValueMask *p_valueMask,
         XSetWindowAttributes *attributes )
 {

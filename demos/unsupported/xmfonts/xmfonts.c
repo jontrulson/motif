@@ -160,7 +160,7 @@ Widget		parent;		/*  parent widget	*/
 	Widget		hsb, vsb;	/*  ScrollBars		*/
 
 	Arg		args[MAX_ARGS];	/*  arg list		*/
-	register int	n;		/*  arg count		*/
+	int	n;		/*  arg count		*/
 
 	char *	name;	
 	int count, i  ;
@@ -287,7 +287,7 @@ Widget		parent;		/*  parent widget	*/
 	Widget		message_box;		/*  MessageBox Dialog	*/
 	Widget		button;
 	Arg		args[MAX_ARGS];		/*  arg list		*/
-	register int	n;			/*  arg count		*/
+	int	n;			/*  arg count		*/
 	
 	char		*name = NULL;		/*  font name		*/
 	XFontStruct	*font = NULL;		/*  font pointer	*/
@@ -365,7 +365,7 @@ Widget CreateHelp (parent)
 	Widget		button;
 	Widget		message_box;	/*  Message Dialog 	*/
 	Arg		args[MAX_ARGS];	/*  arg list		*/
-	register int	n;		/*  arg count		*/
+	int	n;		/*  arg count		*/
 
 	static char	message[BUFSIZ];	/*  help text	*/
 	XmString	title_string = NULL;

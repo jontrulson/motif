@@ -45,8 +45,8 @@ void  main(argc, argv)
 int argc;
 char **argv;
 {
-  register int  n;
-  register int i;
+  int  n;
+  int i;
   Arg args[MAX_ARGS];
   char label[80];
     
@@ -99,8 +99,8 @@ char **argv;
 
 static void CreateRowColumn(Widget Shell1)
 {
-  register int i;
-  register int n;
+  int i;
+  int n;
   Arg args[MAX_ARGS];
   char label[80];
 

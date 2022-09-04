@@ -653,7 +653,7 @@ void
 main(unsigned int argc, char  **argv)
 {
 
-    register int  n;
+    int  n;
     Arg           args[MAX_ARGS];
     XmString      tcs;
     Widget        TopShell1, TopShell2;

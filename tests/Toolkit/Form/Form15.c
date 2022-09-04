@@ -142,7 +142,7 @@ static void CreateBBPopup()
     Widget        BBD;
     Widget	  pb1, pb2, tb1;
     Arg           args[MAX_ARGS];
-    register int  n;
+    int  n;
 
     n = 0;
     XtSetArg (args[n], XmNdefaultPosition, False); n++;

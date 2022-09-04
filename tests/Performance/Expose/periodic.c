@@ -68,7 +68,7 @@ static Widget  CreateLabel(label, parent)
     Widget  parent;
 {
     Widget        widget;
-    register int  n;
+    int  n;
     Arg           args[MAX_ARGS];
     XmString      tcs;
 
@@ -89,7 +89,7 @@ static Widget  CreatePushButton(label, parent)
     Widget  parent;
 {
     Widget        widget;
-    register int  n;
+    int  n;
     Arg           args[MAX_ARGS];
     XmString      tcs;
 
@@ -109,7 +109,7 @@ static Widget  CreateToggle(label, parent)
     Widget  parent;
 {
     Widget        widget;
-    register int  n;
+    int  n;
     Arg           args[MAX_ARGS];
     XmString      tcs;
 

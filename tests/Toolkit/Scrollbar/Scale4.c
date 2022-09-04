@@ -49,7 +49,7 @@ char **argv;
 {
    Widget Scale1;
    Arg args[MAX_ARGS];
-   register int	n;
+   int	n;
    Widget label1, label2, label3;
 
     /*  initialize toolkit  */

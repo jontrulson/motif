@@ -1051,8 +1051,8 @@ ProcessWmSaveHint (ClientData *pCD)
 void 
 ProcessWmHints (ClientData *pCD, Boolean firstTime)
 {
-    register XWMHints *pXWMHints;
-    register long flags;
+    XWMHints *pXWMHints;
+    long flags;
     Pixmap iconPixmap;
     Pixmap iconMask;
 #ifdef WSM
@@ -1506,8 +1506,8 @@ ProcessWmHints (ClientData *pCD, Boolean firstTime)
 void 
 ProcessWmNormalHints (ClientData *pCD, Boolean firstTime, long manageFlags)
 {
-    register SizeHints *pNormalHints;
-    register long       flags;
+    SizeHints *pNormalHints;
+    long       flags;
     int                 diff;
     unsigned long       decoration;
     unsigned int        boxdim, tmpMin;
@@ -3388,7 +3388,7 @@ PlaceIconOnScreen (ClientData *pCD, int *pX, int *pY)
 void 
 FixWindowConfiguration (ClientData *pCD, unsigned int *pWidth, unsigned int *pHeight, unsigned int widthInc, unsigned int heightInc)
 {
-    register int  delta;
+    int  delta;
 
     /*
      * Make sure we're on width/height increment boundaries.
@@ -3451,8 +3451,8 @@ FixWindowConfiguration (ClientData *pCD, unsigned int *pWidth, unsigned int *pHe
 void 
 FixWindowSize (ClientData *pCD, unsigned int *pWidth, unsigned int *pHeight, unsigned int widthInc, unsigned int heightInc)
 {
-    register int  deltaW;
-    register int  deltaH;
+    int  deltaW;
+    int  deltaH;
     WmScreenData *pSD = pCD->pSD;
 
     /*
