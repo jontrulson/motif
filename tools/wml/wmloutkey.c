@@ -568,16 +568,16 @@ if ( outfil == NULL )
     printf ("\nCouldn't open UilKeyTab.h");
     return;
     }
-fprintf (outfil, canned_warn);
+fprintf (outfil, "%s", canned_warn);
 
 /*
  * Print the case sensitive and insensitive tables
  */
-fprintf (outfil, canned1);
+fprintf (outfil,  "%s",canned1);
 wmlOutputUilKeyTabBody (outfil, wml_tok_sens_ptr, &maxlen, &maxkey);
 fprintf (outfil, canned2, maxlen, maxkey);
 wmlOutputUilKeyTabBody (outfil, wml_tok_insens_ptr, &maxlen, &maxkey);
-fprintf (outfil, canned3);
+fprintf (outfil,  "%s",canned3);
 
 /*
  * close the output file
@@ -618,7 +618,7 @@ for ( ndx=0 ; ndx<tokvec->cnt ; ndx++ )
     wmlTokenClassString (tkclass, tok);
     wmlTokenSymKString (tksym, tok);
     wmlTokenTokenString (tktoken, tok);
-    fprintf (outfil, "    {%s, %s, %d, %s, \"%s\"},\n",
+    fprintf (outfil, "    {%s, %s, %zu, %s, \"%s\"},\n",
 	     tkclass,
 	     tksym,
 	     strlen(tokstg),
@@ -806,8 +806,8 @@ if ( outfil == NULL )
     printf ("\nCouldn't open UilTokName.h");
     return;
     }
-fprintf (outfil, canned_warn);
-fprintf (outfil, canned1);
+fprintf (outfil,  "%s",canned_warn);
+fprintf (outfil,  "%s",canned1);
 
 /*
  * Print the token name entries

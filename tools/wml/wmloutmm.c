@@ -203,9 +203,9 @@ int			ctlndx;		/* to access ordered vector */
 /*
  * Write out header information
  */
-fprintf (outfil, canned1);
+fprintf (outfil, "%s",canned1);
 fprintf (outfil, "%s\n", name);
-fprintf (outfil, canned2);
+fprintf (outfil, "%s",canned2);
 
 /*
  * Alphabetize the controls, reason, and argument lists
@@ -281,7 +281,7 @@ while ( rsnndx<mm_rsn_ptr->cnt || ctlndx<mm_ctl_ptr->cnt )
     else
 	fprintf (outfil, "\n");
     }
-fprintf (outfil, canned3);
+fprintf (outfil, "%s", canned3);
 
 /*
  * Write out the argument table
@@ -317,7 +317,7 @@ while ( argndx < mm_arg_ptr->cnt )
     }    
     argndx += 1;
     }
-fprintf (outfil, canned4);
+fprintf (outfil, "%s", canned4);
 
 }
 
