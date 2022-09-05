@@ -71,7 +71,8 @@ else
 PRINTS_SRC =
 endif
 
-libXm_la_LIBADD = ${X_LIBS} ${X_XMU} -lXt -lXext ${LIB_XP} -lX11 ${X_EXTRA_LIBS}
+libXm_la_LIBADD = ${X_LIBS} ${X_XMU} -lXt -lXext ${LIB_XP} -lX11 ${X_EXTRA_LIBS} \
+	$(LTLIBICONV)
 
 noinst_HEADERS = BaseClassI.h \
 BitmapsI.h \
