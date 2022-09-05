@@ -209,3 +209,10 @@ int yywrap ()
 	 }
     return (1);
 }
+
+/* a simple main so we do not require -lfl or -ll */
+int main(void) {
+    while (yylex() != 0) { }
+    return 0;
+}
+
