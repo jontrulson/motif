@@ -8,7 +8,7 @@ cd "$srcdir"
 DIE=0
 
 libtoolize --force --automake
-aclocal -I .
+aclocal -I m4
 autoconf
 autoheader
 automake --foreign  --include-deps --add-missing
