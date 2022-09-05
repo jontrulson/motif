@@ -44,7 +44,7 @@ AC_CONFIG_HEADERS([include/config.h lib/Xm/Xm.h])
 dnl Checks for programs.
 AC_PROG_CC
 AC_PROG_CPP
-AM_PROG_LIBTOOL
+LT_INIT
 
 AC_EXEEXT
 
@@ -67,7 +67,6 @@ dnl Checks for libraries.
 
 AC_PATH_X
 AC_PATH_XTRA
-LT_LIB_XTHREADS
 
 dnl Add X11 goodies here
 EXTRA_LIBS="${X_LIBS} ${EXTRA_LIBS}"
@@ -103,7 +102,6 @@ AM_CONDITIONAL(OM_XMU, test x$X_XMU != x)
 
 dnl Checks for header files.
 AC_HEADER_DIRENT
-AC_HEADER_STDC
 AC_HEADER_SYS_WAIT
 AC_CHECK_HEADERS(fcntl.h limits.h malloc.h sys/malloc.h strings.h sys/file.h sys/time.h unistd.h wchar.h)
 AC_CHECK_HEADERS(wctype.h, AC_DEFINE(HAS_WIDECHAR_FUNCTIONS,1,System supports wchar))
@@ -116,21 +114,17 @@ AC_TYPE_MODE_T
 AC_TYPE_OFF_T
 AC_TYPE_PID_T
 AC_TYPE_SIZE_T
-AC_HEADER_TIME
 AC_STRUCT_TM
 AC_TYPE_UID_T
-WEAK_ALIAS_SUPPORT
 
 dnl Checks for library functions.
 AC_FUNC_ALLOCA
 AC_FUNC_MEMCMP
 AC_FUNC_SETPGRP
-AC_TYPE_SIGNAL
 AC_FUNC_STRCOLL
 AC_FUNC_STRFTIME
 AC_FUNC_FORK([])
 AC_FUNC_VPRINTF
-AM_FUNC_VOID_SPRINTF
 AC_CHECK_FUNCS(wcslen wcscpy wcsncpy wcschr wcscat wcsncat getcwd gettimeofday mkdir re_comp regcmp select strcspn strerror strstr strtod strtol uname)
 AC_CHECK_FUNCS(strdup,,AC_DEFINE(NEED_STRDUP, 1, no strdup))
 AC_CHECK_FUNCS(strcasecmp,,AC_DEFINE(NEED_STRCASECMP, 1, no strcasecmp))
@@ -307,6 +301,10 @@ AC_CHECK_LIB(ICE, IceCloseConnection, [XTOOLLIB="-lICE ${XTOOLLIB}"], ,
 AC_CHECK_LIB(SM, SmcOpenConnection, [XTOOLLIB="-lSM ${XTOOLLIB}"], ,
                  [${EXTRA_INCS} ${EXTRA_LIBS}])
 AC_SUBST([XTOOLLIB])
+
+# iconv
+AM_ICONV
+
 
 LIBS="${EXTRA_LIBS} ${LIBS} ${PTHREAD_LIBS}"
 
