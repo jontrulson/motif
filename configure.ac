@@ -55,8 +55,16 @@ AC_CHECK_PROGS(YACC, byacc, yacc)
 dnl AC_PROG_SPLINT
 AC_CHECK_PROGS(SPLINT, splint)
 
-AC_PROG_LEX(yywrap)
 AC_PROG_YACC
+if test -z "$ac_cv_prog_YACC"; then
+   MISSING_PROGS="[bison or byacc] ${MISSING_PROGS}"
+fi
+
+AC_PROG_LEX(noyywrap)
+if test -z "$ac_cv_prog_LEX"; then
+   MISSING_PROGS="[flex or lex] ${MISSING_PROGS}"
+fi
+
 
 AC_PROG_INSTALL
 AC_PROG_LN_S
