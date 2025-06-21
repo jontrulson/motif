@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: Build Motif on Ununtu 22.04
+=======
+name: Build Motif on Ubuntu 22.04
+>>>>>>> 9f5ce7db (Test a basic build workflow)
 
 on:
   push:
@@ -29,7 +33,8 @@ jobs:
           libxmu-dev \
           libxft-dev \
           libxinerama-dev \
-          libxpm-dev
+          libxpm-dev \
+          xbitmaps
 
     - name: Generate configure script
       run: |
