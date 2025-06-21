@@ -1,0 +1,50 @@
+name: Build Motif on Ubuntu 22.04
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          build-essential \
+          autotools-dev \
+          autoconf \
+          automake \
+          libtool \
+          pkg-config \
+          libxt-dev \
+          libxmu-dev \
+          libxft-dev \
+          libxinerama-dev \
+          libxpm-dev \
+          xbitmaps
+
+    - name: Generate configure script
+      run: |
+        if [ -f autogen.sh ]; then
+          ./autogen.sh
+        elif [ -f configure.ac ] || [ -f configure.in ]; then
+          autoreconf -fiv
+        fi
+
+    - name: Configure
+      run: ./configure
+
+    - name: Build
+      run: make -j$(nproc)
+
+    - name: Test
+      run: make check
