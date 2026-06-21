@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_INIT([Motif],
-        [2.3.8a],
+        [2.3.9],
         [https://github.com/jtrulson/motif],
         [motif],
         [https://github.com/jtrulson/motif])
