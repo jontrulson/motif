@@ -18,17 +18,5 @@ The idea here is to fix up things to make it easier to build on more
 modern systems and allow greater participation of the development
 community.
 
----
-
-From the original README which is now removed:
-
-Please see the file COPYING for important information.
-
-Please see the file RELNOTES for current Release information.
-
-Please see the file INSTALL.configure on how to build and install this
-product using the autoconf tools.
-
-Please see the file distro/README.RPM for information on creating rpms
-from this source tree.
+See the [HISTORY.md](HISTORY.md) file for information on releases.
 
