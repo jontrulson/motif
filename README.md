@@ -2,7 +2,7 @@ OpenMotif
 ===
 
 This is a copy of the Open Motif repository at
-https://git.code.sf.net/p/motif/code .
+https://sourceforge.net/p/motif/code .
 
 That repo is maintained by ICS MotifZone: https://motif.ics.com/
 
